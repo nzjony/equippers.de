@@ -1,6 +1,7 @@
 ---
-layout: hero
+layout: base
 title: Berlin
+hero_html: <h1>Kirche anders als du denkst</h1>
 ---
 
 <header>
@@ -14,6 +15,8 @@ title: Berlin
 		<li><a href="./#contact">Contact</a></li>
 	</ul>
 </header>
+
+{% include hero.html content=page.hero_html %}
 
 <section class="intro">
 	<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Unsere Mission ist es, dich durch den Glauben an Jesus Christus für das Leben ausrüsten. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen.</p>
