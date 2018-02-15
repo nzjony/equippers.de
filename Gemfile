@@ -1,9 +1,8 @@
-# frozen_string_literal: true
+# > bundle install
+# > bundle exec jekyll serve
 
-# git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+gem 'jekyll', '3.7.2'
 
 group :jekyll_plugins do
-	gem 'jekyll', '3.7.2'
 	gem 'stylus', '1.0.2'
 end
-
