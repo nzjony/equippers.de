@@ -4,12 +4,9 @@
 	</a>
 
 	<nav>
-		<a href="berlin">Home</a>
-		<a href="berlin/about">Über uns</a>
-		<a href="berlin/equip">Equip</a>
-		<a href="berlin/kleingruppen">Kleingruppen</a>
-		<a href="berlin/podcast">Podcast</a>
-		<a href="berlin#contact">Kontakt</a>
+		{% for link in include.nav %}
+			<a href="{{ link.url }}">{{ link.title }}</a>
+		{% endfor %}
 	</nav>
 
 	<button aria-label="toggle menu">
