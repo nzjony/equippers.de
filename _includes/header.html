@@ -1,0 +1,25 @@
+<header>
+	<a href="/" aria-label="logo">
+		{% include logo.html %}
+	</a>
+
+	<nav>
+		<a href="berlin">Home</a>
+		<a href="berlin/about">Über uns</a>
+		<a href="berlin/equip">Equip</a>
+		<a href="berlin/kleingruppen">Kleingruppen</a>
+		<a href="berlin/podcast">Podcast</a>
+		<a href="berlin#contact">Kontakt</a>
+	</nav>
+
+	<button aria-label="toggle menu">
+		<span class="burger"></span>
+	</button>
+</header>
+
+<script>
+document.querySelector('header button').addEventListener(
+	'click',
+	() => document.querySelector('header').classList.toggle('nav-visible')
+);
+</script>
