@@ -1,3 +1,7 @@
 stylus:
   compress: true
   path: styles
+
+assets:
+  sources:
+    - _scripts
