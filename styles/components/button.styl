@@ -1,15 +1,14 @@
 .button
 	display: inline-block
-	padding: 0.75em 1em
+	padding: 0.75em 1.5em
 	border-radius: 3px
 	text-decoration: none
 	background-color: $light-gray
 	color: $dark-gray
-	// box-shadow: 5px 5px $medium-gray
+	addTransition("background-color, color")
 
 	&:hover
-		addTransition(properties: background-color, color)
-		background-color: $dark-gray
+		background-color: $black
 		color: $white
 
 	&::before
@@ -18,5 +17,11 @@
 		font-size: 1.4em
 		line-height: 0
 
+
 	&.outline
-		// border: 1px solid
+		border: 1px solid
+
+	&.white
+		background-color: $white
+		&:hover
+			background-color: $black
