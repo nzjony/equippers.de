@@ -16,27 +16,36 @@ nav:
     url: /berlin/#contact
 hero_image:
 hero_html: <h1>Kirche anders als du denkst</h1>
+service_time: 11:00 Uhr
+location: Blissestr. 2, 10713 Berlin
+gmaps_link: https://maps.google.de/maps?daddr=Blissestr.%202%2010713%20Berlin
+bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%202+10713+Berlin
 ---
 
 {% include header.html nav=page.nav %}
 
 {% include hero.html content=page.hero_html image=page.hero_image %}
 
-<section class="intro max-width centered">
-	<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Unsere Mission ist es, dich durch den Glauben an Jesus Christus für das Leben ausrüsten. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen.</p>
+<section>
+	<div class="editable content centered">
+		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Unsere Mission ist es, dich durch den Glauben an Jesus Christus für das Leben ausrüsten. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen.</p>
+	</div>
 
-	<a href="/about">Mehr über uns</a>
+	<div class="content centered">
+		<a href="/about" class="button outline">Mehr über uns</a>
 
-	<h2>Gottesdienst diesen Sonntag:</h2>
-	<p>
-		11:00 Uhr<br>
-		Blissestr. 2, 10713 Berlin
-	</p>
+		<h2 class="editable">Gottesdienst diesen Sonntag:</h2>
+		<p>
+			<span style="font-size: 2em; font-weight: 100">{{ page.service_time }}</span><br>
+			{{ page.location }}
+		</p>
 
-	<p>
-		<a href="https://maps.google.de/maps?daddr=Blissestr.%202%2010713%20Berlin">Anfahrt mit Google Maps</a><br>
-		<a href="https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%202+10713+Berlin">Anfahrt mit BVG</a>
-	</p>
+		<p>
+			<a href="{{ page.gmaps_link }}">Anfahrt mit Google Maps</a><br>
+			<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>
+		</p>
+	</div>
+
 </section>
 
 <section class="events">

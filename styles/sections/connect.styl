@@ -1,0 +1,19 @@
+.connect
+	display: grid
+	grid-template-columns: repeat(2, 50vw)
+
+	div
+		height: 50vw
+		display: grid
+		align-content: center
+		justify-content: center
+		background: $medium-gray
+
+		&:nth-of-type(2n)
+			background: $light-gray
+
+	@media (min-width: 600px)
+		grid-template-columns: repeat(4, 25vw)
+
+		div
+			height: 25vw

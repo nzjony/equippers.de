@@ -1,5 +1,3 @@
-$breakpoint = 64em // 1024px
-
 header
 	z-index: 100
 	position: absolute
@@ -65,7 +63,7 @@ header
 	button
 		font-size: 1rem;
 
-	@media (min-width: $breakpoint)
+	@media (min-width: $desktop-breakpoint)
 		height: auto
 
 		grid-template-columns: 1fr
@@ -153,5 +151,5 @@ header.nav-visible
 			bottom: 0
 			transform: rotate(45deg)
 
-	@media (min-width: $breakpoint)
+	@media (min-width: $desktop-breakpoint)
 		position: absolute
