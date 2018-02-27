@@ -2,18 +2,27 @@
 	display: grid
 	grid-template-columns: repeat(2, 50vw)
 
-	div
+	& > div
 		height: 50vw
 		display: grid
 		align-content: center
 		justify-content: center
-		background: $medium-gray
+		text-align: center
 
-		&:nth-of-type(2n)
-			background: $light-gray
+		&:nth-of-type(1)
+			background: $blue
+		&:nth-of-type(2)
+			background: $green
+		&:nth-of-type(3)
+			background: $red
+		&:nth-of-type(4)
+			background: $yellow
+
+		.icon
+			font-size: 5em
 
 	@media (min-width: 600px)
 		grid-template-columns: repeat(4, 25vw)
 
-		div
+		& > div
 			height: 25vw
