@@ -16,11 +16,10 @@ nav:
     url: '/berlin/#contact'
 hero_image:
 hero_html: <h1>Kirche anders als du denkst</h1>
-service_time:
+service_time_: 11:00 Uhr
 location: 'Blissestraße 2, 10713 Berlin'
 gmaps_link: 'https://maps.google.de/maps?daddr=Blissestr.%202%2010713%20Berlin'
-bvg_link: >-
-  https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%202+10713+Berlin
+bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%202+10713+Berlin
 ---
 
 {% include header.html nav=page.nav %}
@@ -29,7 +28,7 @@ bvg_link: >-
 
 <section>
 	<div class="editable content centered">
-		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Wir sind Freunde, die sich gegenseitig unterst&uuml;tzen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, dich durch den Glauben an Jesus Christus f&uuml;r das Leben ausr&uuml;sten.</p>
+		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, dich durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
 	</div>
 
 	<div class="content centered">
@@ -37,7 +36,7 @@ bvg_link: >-
 
 		<h2 class="editable">Gottesdienst diesen Sonntag:</h2>
 		<p>
-			<span style="font-size: 2em; font-weight: 100">{{ page.service_time }}</span><br />
+			<span style="font-size: 2em; font-weight: 100">{{ page.service_time_ }}</span><br />
 			{{ page.location }}
 		</p>
 
@@ -81,8 +80,20 @@ bvg_link: >-
 </section> {% endcomment %}
 
 <section class="connect">
-	<div>A</div>
-	<div>B</div>
-	<div>C</div>
-	<div>D</div>
+	<div>
+		<div class="icon">🤦🏻‍♂️</div>
+		<div class="title">Facepalm</div>
+	</div>
+	<div>
+		<div class="icon">🤓</div>
+		<div class="title">Nerder</div>
+	</div>
+	<div>
+		<div class="icon">✉️</div>
+		<div class="title">Newsletter</div>
+	</div>
+	<div>
+		<div class="icon">🎧</div>
+		<div class="title">Podcast</div>
+	</div>
 </section>
