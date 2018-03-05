@@ -1,10 +1,8 @@
-$font = 'sofia-pro'
-
 html
 	line-height: 1.35
 
 body
-	font-family: $font, system-ui, -apple-system, BlinkMacSystemFont,
+	font-family: 'sofia-pro', system-ui, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
 		'Droid Sans', 'Helvetica Neue', sans-serif
 
@@ -13,8 +11,20 @@ body
 	@media (min-width: 600px)
 		font-size: 1.25em
 
-.centered
-	text-align: center
+h1
+h2
+h3
+h4
+h5
+h6
+	margin: 1em 0 0.5em
+
+p
+	margin: 1em 0
+
+section p:last-of-type
+	margin-bottom: 0
+	padding-bottom: 1em
 
 a
 	color: inherit
