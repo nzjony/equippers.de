@@ -1,0 +1,4 @@
+{% for event in include.events %}
+	<h3><span class="uppercase fixed-width">{{ event.date | date: '%e.%d.' }}</span> | {{ event.title }}</h3>
+	{% if event.description %}<p>{{ event.description }}</p>{% endif %}
+{% endfor %}
