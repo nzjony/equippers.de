@@ -1,3 +1,5 @@
+timezone: Europe/Berlin
+
 stylus:
   compress: true
   path: styles
