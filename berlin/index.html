@@ -43,6 +43,15 @@ communities:
   - title: Praktikum
     path: /berlin/praktikum
     image: /images/CLRS.jpg
+connect:
+  - title: Facepalm
+    icon: 🤦🏻‍♂️
+  - title: Twitter
+    icon: 🤓
+  - title: Newsletter
+    icon: ✉️
+  - title: Podcast
+    icon: 🎧
 contact:
   address: Blissestr. 2, 10713 Berlin
   email: mail@equippers.de
@@ -106,22 +115,12 @@ bank_account:
 		<h1 class="editable">Bleibe auf dem Laufenden</h1>
 	</div>
 	<div class="grid">
-		<div>
-			<div class="icon">🤦🏻‍♂️</div>
-			<div class="title">Facepalm</div>
-		</div>
-		<div>
-			<div class="icon">🤓</div>
-			<div class="title">Twitter</div>
-		</div>
-		<div>
-			<div class="icon">✉️</div>
-			<div class="title">Newsletter</div>
-		</div>
-		<div>
-			<div class="icon">🎧</div>
-			<div class="title">Podcast</div>
-		</div>
+		{% for square in page.connect %}
+			<div>
+				<div class="icon">{{ square.icon }}</div>
+				<div class="title">{{ square.title }}</div>
+			</div>
+		{% endfor %}
 	</div>
 </section>
 
