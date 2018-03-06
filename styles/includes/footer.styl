@@ -1,0 +1,13 @@
+footer
+	background: linear-gradient(to bottom, #f9f9f9, $white)
+
+	ul
+		list-style-type: none
+		padding: 0
+
+		@media (min-width: $tablet-breakpoint)
+			li
+				display: inline-block
+
+				&:not(:last-of-type)::after
+					content: " \0000B7 "

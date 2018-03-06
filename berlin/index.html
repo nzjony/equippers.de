@@ -20,6 +20,20 @@ service_time_: 11:00 Uhr
 location: 'Blissestraße 2, 10713 Berlin'
 gmaps_link: 'https://maps.google.de/maps?daddr=Blissestr.%202%2010713%20Berlin'
 bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%202+10713+Berlin
+events:
+  - title: Equippers Konferenz
+    date: 2018-11-02 00:00:00
+    description: Unsere jährliche Konferenz findet dieses Jahr am 2. und 3. November statt.
+contact:
+  address: Blissestr. 2, 10713 Berlin
+  email: mail@equippers.de
+  phone: +49 (0)30 3180 4840
+  phone_link: +493031804840
+bank_account:
+  holder: Equippers Berlin e. V.
+  iban: DE39100500000190371552
+  bic: BELADEBE
+  bank: Berliner Sparkasse
 ---
 
 {% include header.html nav=page.nav %}
@@ -45,11 +59,13 @@ bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%20
 			<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>
 		</p>
 	</div>
-
 </section>
 
-<section class="events">
-	<h2>Events</h2>
+<section class="events dark padding-vertical">
+	<div class="content">
+		<h1 class="editable">Events</h1>
+		{% include events.html events=page.events %}
+	</div>
 </section>
 
 {% comment %} <section class="communities">
@@ -80,20 +96,30 @@ bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%20
 </section> {% endcomment %}
 
 <section class="connect">
-	<div>
-		<div class="icon">🤦🏻‍♂️</div>
-		<div class="title">Facepalm</div>
+	<div class="content">
+		<h1 class="editable">Bleibe auf dem Laufenden</h1>
 	</div>
-	<div>
-		<div class="icon">🤓</div>
-		<div class="title">Nerder</div>
-	</div>
-	<div>
-		<div class="icon">✉️</div>
-		<div class="title">Newsletter</div>
-	</div>
-	<div>
-		<div class="icon">🎧</div>
-		<div class="title">Podcast</div>
+	<div class="grid">
+		<div>
+			<div class="icon">🤦🏻‍♂️</div>
+			<div class="title">Facepalm</div>
+		</div>
+		<div>
+			<div class="icon">🤓</div>
+			<div class="title">Twitter</div>
+		</div>
+		<div>
+			<div class="icon">✉️</div>
+			<div class="title">Newsletter</div>
+		</div>
+		<div>
+			<div class="icon">🎧</div>
+			<div class="title">Podcast</div>
+		</div>
 	</div>
 </section>
+
+
+<footer class="content padding-vertical">
+	{% include footer.html contact=page.contact bank_account=page.bank_account %}
+</footer>
