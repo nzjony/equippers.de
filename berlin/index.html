@@ -3,17 +3,17 @@ layout: base
 title: Equippers Berlin
 nav:
   - title: Home
-    url: /berlin
+    path: /berlin
   - title: Über uns
-    url: /berlin/about
+    path: /berlin/about
   - title: Equip
-    url: /berlin/equip
+    path: /berlin/equip
   - title: Kleingruppen
-    url: /berlin/kleingruppen
+    path: /berlin/kleingruppen
   - title: Podcast
-    url: 'https://overcast.fm/itunes977023058/equippers-berlin'
+    path: 'https://overcast.fm/itunes977023058/equippers-berlin'
   - title: Kontakt
-    url: '/berlin/#contact'
+    path: '/berlin/#contact'
 hero_image:
 hero_html: <h1>Kirche anders als du denkst</h1>
 service_time_: 11:00 Uhr
@@ -23,12 +23,31 @@ bvg_link: https://www.bvg.de/index.php/de/widgets/fahrinfo/1/300/6/Blissestr.%20
 events:
   - title: Equippers Konferenz
     date: 2018-11-02 00:00:00
-    description: Unsere jährliche Konferenz findet dieses Jahr am 2. und 3. November statt.
+    description: Unsere jährliche Konferenz findet dieses Jahr am 2. und 3. November statt. Save the date!
+communities:
+  - title: Youth
+    path: /berlin/youth
+    image: /images/CLRS.jpg
+  - title: YA
+    path: /berlin/ya
+    image: /images/CLRS.jpg
+  - title: Kids
+    path: /berlin/kids
+    image: /images/CLRS.jpg
+  - title: Sistas
+    path: /berlin/sistas
+    image: /images/CLRS.jpg
+  - title: Kleingruppen
+    path: /berlin/kleingruppen
+    image: /images/CLRS.jpg
+  - title: Praktikum
+    path: /berlin/praktikum
+    image: /images/CLRS.jpg
 contact:
   address: Blissestr. 2, 10713 Berlin
   email: mail@equippers.de
   phone: +49 (0)30 3180 4840
-  phone_link: +493031804840
+  phone_link: '+493031804840'
 bank_account:
   holder: Equippers Berlin e. V.
   iban: DE39100500000190371552
@@ -48,9 +67,9 @@ bank_account:
 	<div class="content centered">
 		<a href="/about" class="button outline white">Mehr über uns</a>
 
-		<h2 class="editable">Gottesdienst diesen Sonntag:</h2>
+		<h2 class="editable padding-top">Gottesdienst diesen Sonntag:</h2>
 		<p>
-			<span style="font-size: 2em; font-weight: 100">{{ page.service_time_ }}</span><br />
+			<span style="font-size: 2.5em; font-weight: 100">{{ page.service_time_ }}</span><br />
 			{{ page.location }}
 		</p>
 
@@ -68,34 +87,21 @@ bank_account:
 	</div>
 </section>
 
-{% comment %} <section class="communities">
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Youth</div>
+<section class="communities padding-vertical">
+	<div class="content">
+		<h1 class="editable">Werde Teil</h1>
+		<div class="grid">
+			{% for community in page.communities %}
+				<a href="community.path" class="card">
+					<div class="img" style="background-image: url({{ community.image }})"></div>
+					<div class="title">{{ community.title }}</div>
+				</a>
+			{% endfor %}
+		</div>
 	</div>
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Kids</div>
-	</div>
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Sistas</div>
-	</div>
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Kleingruppen</div>
-	</div>
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Equip</div>
-	</div>
-	<div class="card">
-		<div class="img"></div>
-		<div class="title">Praktikum</div>
-	</div>
-</section> {% endcomment %}
+</section>
 
-<section class="connect">
+<section class="connect padding-top">
 	<div class="content">
 		<h1 class="editable">Bleibe auf dem Laufenden</h1>
 	</div>
@@ -120,6 +126,8 @@ bank_account:
 </section>
 
 
-<footer class="content padding-vertical">
-	{% include footer.html contact=page.contact bank_account=page.bank_account %}
+<footer class="padding-vertical">
+	<div class="content">
+		{% include footer.html contact=page.contact bank_account=page.bank_account %}
+	</div>
 </footer>

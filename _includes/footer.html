@@ -12,14 +12,14 @@
 <h3 class="uppercase underline">Kontakt:</h3>
 <p class="no-margin-top">
 	{{ include.contact.address }}<br>
-	<a href="mailto:{{ contact.email }}">{{ include.contact.email }}</a><br>
-	<a href="tel:{{ contact.phone_link }}">{{ include.contact.phone }}</a>
+	<a href="mailto:{{ include.contact.email }}">{{ include.contact.email }}</a><br>
+	<a href="tel:{{ include.contact.phone_link }}">{{ include.contact.phone }}</a>
 </p>
 
 <h3 class="uppercase underline">Bankverbindung:</h3>
 <p class="no-margin-top">
-	Inhaber: {{ include.bank_acount.holder }}<br>
-	IBAN: {{ include.bank_acount.iban }}<br>
-	BIC: {{ include.bank_acount.bic }}<br>
-	Bank: {{ include.bank_acount.bank }}
+	<strong>Inhaber:</strong> {{ include.bank_account.holder }}<br>
+	<strong>IBAN:</strong> {{ include.bank_account.iban }}<br>
+	<strong>BIC:</strong> {{ include.bank_account.bic }}<br>
+	<strong>Bank:</strong> {{ include.bank_account.bank }}
 </p>
