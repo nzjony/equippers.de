@@ -5,5 +5,7 @@ stylus:
   path: styles
 
 assets:
+  defaults:
+    js: { integrity: false }
   sources:
     - _scripts
