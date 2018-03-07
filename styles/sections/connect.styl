@@ -3,7 +3,10 @@
 	grid-template-columns: repeat(2, 50vw)
 	color: $light
 
+	& > a
 	& > div
+		text-decoration: none
+
 		height: 50vw
 		display: grid
 		align-content: center
@@ -22,12 +25,16 @@
 		.icon svg
 			fill: $light
 			width: 3em
+			height: @width
+			margin-bottom: 0.25em
 
 			@media (min-width: $desktop-breakpoint)
 				width: 5em
+				height: @width
 
 	@media (min-width: $tablet-breakpoint)
 		grid-template-columns: repeat(4, 25vw)
 
+		& > a
 		& > div
 			height: 25vw
