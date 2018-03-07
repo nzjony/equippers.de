@@ -112,12 +112,12 @@ connect:
 	</div>
 	<div class="grid">
 		{% for square in page.connect %}
-			<div>
+			<a href="{{ square.link }}">
 				<div class="icon">
 					<svg><use xlink:href="#icon-{{ square.svg_icon_id }}"></use></svg>
 				</div>
 				<div class="title">{{ square.title }}</div>
-			</div>
+			</a>
 		{% endfor %}
 	</div>
 </section>
