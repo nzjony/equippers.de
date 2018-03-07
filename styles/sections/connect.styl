@@ -14,13 +14,21 @@
 		text-align: center
 
 		&:nth-of-type(1)
-			background: $blue
+			background-color: $blue
+			&:hover
+				background-color: darken(@background-color, 10%)
 		&:nth-of-type(2)
-			background: $purple
+			background-color: $purple
+			&:hover
+				background-color: darken(@background-color, 10%)
 		&:nth-of-type(3)
-			background: $red
+			background-color: $red
+			&:hover
+				background-color: darken(@background-color, 10%)
 		&:nth-of-type(4)
-			background: $orange
+			background-color: $orange
+			&:hover
+				background-color: darken(@background-color, 10%)
 
 		.icon svg
 			fill: $light
