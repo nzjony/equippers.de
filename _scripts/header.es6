@@ -2,6 +2,7 @@
 // Header Nav Toggle
 
 const header = document.querySelector('header');
+const navToggle = document.querySelector('header button');
 
 let timeOut = null;
 
@@ -11,13 +12,14 @@ const toggleMenu = () => {
 };
 
 const isDesktopNav = () => window.getComputedStyle(header)['align-items'] === 'center';
+const getUrlPathDepth = () => location.pathname.replace(/\/$/, '').match(/\//g).length;
 
 try {
 	(() => {
-		document.querySelector('header button').addEventListener('click', toggleMenu);
+		navToggle.addEventListener('click', toggleMenu);
 
-		// auto show and hide desktop menu for home page
-		if (location.pathname.match(/\//g).length <= 2 && isDesktopNav()) {
+		// auto show desktop nav for home page
+		if (getUrlPathDepth() <= 1 && isDesktopNav()) {
 			toggleMenu();
 			// toggle back after a few seconds
 			timeOut = setTimeout(toggleMenu, 10 * 1000);
