@@ -44,14 +44,14 @@ communities:
     path: /berlin/praktikum
     image: /images/CLRS.jpg
 connect:
-  - title: Facepalm
-    icon: 🤦🏻‍♂️
-  - title: Twitter
-    icon: 🤓
+  - title: Facebook
+    svg_icon_id: facebook
+  - title: Instagram
+    svg_icon_id: instagram
   - title: Newsletter
-    icon: ✉️
+    svg_icon_id: newsletter
   - title: Podcast
-    icon: 🎧
+    svg_icon_id: podcast
 ---
 
 {% include header.html nav=page.nav %}
@@ -100,6 +100,8 @@ connect:
 	</div>
 </section>
 
+{% include connect-icons.html %}
+
 <section class="connect padding-top">
 	<div class="content">
 		<h1 class="editable">Bleibe auf dem Laufenden</h1>
@@ -107,13 +109,14 @@ connect:
 	<div class="grid">
 		{% for square in page.connect %}
 			<div>
-				<div class="icon">{{ square.icon }}</div>
+				<div class="icon">
+					<svg><use xlink:href="#icon-{{ square.svg_icon_id }}"></use></svg>
+				</div>
 				<div class="title">{{ square.title }}</div>
 			</div>
 		{% endfor %}
 	</div>
 </section>
-
 
 <footer class="padding-vertical">
 	<div class="content">
