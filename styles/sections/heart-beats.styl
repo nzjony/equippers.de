@@ -1,0 +1,14 @@
+.heart-beats
+	display: grid
+	grid-template-columns: 1fr
+	grid-gap: 2rem
+
+	@media(min-width: $desktop-breakpoint)
+		grid-template-columns: repeat(5, 1fr)
+		max-width: 90%
+		margin: 0 auto
+
+	.drop-cap
+		@extends .black-font
+		font-size: 5em
+		line-height: 1

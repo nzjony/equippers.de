@@ -1,0 +1,66 @@
+---
+layout: berlin
+title: Über Equippers Berlin
+hero_html: <h1>Über uns</h1>
+hero_image:
+heart_beats:
+  - title: Honour
+    description: Wir streben danach, Gott, Gottes Wort und einander zu ehren.
+  - title: Excel
+    description: Wir glänzen durch Exzellenz. Wir geben Gott das Beste unserer Zeit, unserer Talente und unserer Resourcen.
+  - title: Advance
+    description: Größe erreichen wir, indem wir Menschen dienen und Jesus ähnlicher werden. Wir bringen das Königreich Gottes voran, wenn wir unsere Gaben einsetzen, um Gott, der Stadt und einander zu dienen.
+  - title: Reach Out
+    description: Wir sind vorsätzlich darin, uns nach denen auszustrecken, die uns nahe, aber Gott fern sind.
+  - title: Together
+    description: Wir lieben es, das Leben gemeinsam zu leben. Wir sind nicht nur zusammen im selben Raum, sondern zusammen zusammen. Wir teilen die gemeinsame Vision, Gott und andere zu lieben.
+---
+
+{% include hero.html content=page.hero_html image=page.hero_image %}
+
+<article>
+	<section class="content editable">
+		<h1>Unsere Mission:</h1>
+		<h3 class="uppercase">Menschen durch den Glauben an Jesus Christus für das Leben ausrüsten.</h3>
+		<p>Wir wollen die ganze Kirche für ihre Mission ausrüsten und freisetzen. Wir glauben, dass jeder Christ zum Dienen berufen ist, nicht nur ein paar Auserwählte. Erziehung, Bildung, Sport, Gesundheitswesen, Geschäftswelt, Politik, Medien, Kunst, Entertainment, Familie... egal, für welchen Teil unserer Gesellschaft Gott dich berufen hat, wir wollen füreinander einstehen und dich anfeuern, damit du das Reich Gottes in deine Welt bringen kannst.</p>
+	</section>
+
+	<section class="content editable">
+		<h1>Unsere Werte</h1>
+		<p>Wenn Menschen zusammenkommen und sich mit abgemachten Werten für ein gemeinsames Ziel vereinen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge. Wenn du mehr über unsere Werte willst, besuche unseren Kurs <a href="/berlin/equip">Equip</a>.</p>
+	</section>
+
+	<div class="heart-beats">
+		{% for beat in page.heart_beats %}
+			<div class="beat text-center">
+				<div class="drop-cap no-margin-vertical">{{ beat.title | slice: 0 }}</div>
+				<h4 class="no-margin-top">{{ beat.title }}</h4>
+				<p class="padding-horizontal">{{ beat.description }}</p>
+			</div>
+		{% endfor %}
+	</div>
+
+	<section class="content editable">
+		<h1>Unser Pastor</h1>
+		<h3>Jürgen Eisen</h3>
+		<p>Jürgen ist Leiter und Pastor aus Leidenschaft und leitet zusammen mit seiner Frau Miriam seit 2010 Equippers in Berlin als Teil des Equippers-Netzwerks. Gemeinsam bauen sie eine lebendige, authentische und lebensnahe Kirche.</p>
+	</section>
+
+	<section class="content editable">
+		<h1>Equippers Netzwerk</h1>
+		<p>Equippers Berlin ist Teil eines <a href="https://www.equipperschurch.com">weltweiten Netzwerks</a> von mehr als zwanzig Kirchen, das beständig wächst. Durch den apostolischen Dienst von Pastor Bruce Monk aus Neuseeland entstehen überall auf der Welt wachsende, gesunde Kirchen. Gemeinsam können wir einen größeren Einfluss darauf haben, das Evangelium weiterzugeben. Neben den Kirchen gibt es auch das <a href="https://equipperscollege.com">Equippers College</a> in Auckland.</p>
+	</section>
+
+	<section class="content editable">
+		<h1>Gottesdienste</h1>
+		<h3>Kinderprogramm/-betreuung</h3>
+		<p>Parallel zum Gottesdienst bieten wir für Kinder von drei bis zehn Jahren ein Kinderprogramm an.</p>
+		<h3>Eltern-Kind-Raum</h3>
+		<p>Für Eltern mit Babies und Kleinkindern steht ein Raum mit Live-Videoübertragung des Gottesdiensts zur Verfügung.</p>
+		<h3>Übersetzung</h3>
+		<p>Wir übersetzen unsere Gottesdienste komplett simultan in englisch. Zum Hören der Übersetzung kannst du dein eigenes Smartphone und Kopfhörer benutzen. Lade dazu schonmal die App Be On Air Corporate Client für Apple iOS oder Android herunter. Weitere Infos bekommst du sonntags am Infopoint.</p>
+		<h3>Geben</h3>
+		<p>Unsere Kirche baut auf die Großzügigkeit und Hingabe von Menschen, die sowohl Zeit als auch Geld investieren. Wir glauben an das biblische Prinzip des zehnten Teils. Die Bibel spricht darüber, die ersten zehn Prozent des Einkommens in Gottes Haus zu bringen (Maleachi 3:10). Der Zehnte und weitere Opfer finanzieren unsere Vision und Aktivitäten. Deine Großzügigkeit baut die Kirche und macht einen Unterschied für das Leben von Menschen. Während des Gottesdienstes hast du die Möglichkeit, per Umschlag entweder direkt bar oder mit einer Lastschrift zu geben. Außerdem kannst du uns deine Spende überweisen. Die Bankverbindung findest du am Ende dieser Webseite.</p>
+	</section>
+
+</article>
