@@ -1,19 +1,6 @@
 ---
-layout: base
+layout: berlin
 title: Equippers Berlin
-nav:
-  - title: Home
-    path: /berlin
-  - title: Über uns
-    path: /berlin/about
-  - title: Equip
-    path: /berlin/equip
-  - title: Kleingruppen
-    path: /berlin/kleingruppen
-  - title: Podcast
-    path: 'https://overcast.fm/itunes977023058/equippers-berlin'
-  - title: Kontakt
-    path: '/berlin/#contact'
 hero_image:
 hero_html: <h1>Kirche anders als du denkst</h1>
 service_time_: 11:00 Uhr
@@ -46,10 +33,10 @@ communities:
 connect:
   - title: Facebook
     svg_icon_id: facebook
-    link: https://www.facebook.com
+    link: https://www.facebook.com/equippersberlin
   - title: Instagram
     svg_icon_id: instagram
-    link: https://www.instagram.com
+    link: https://www.instagram.com/equippersberlin/
   - title: Newsletter
     svg_icon_id: newsletter
     link: https://mailchimp.com
@@ -57,8 +44,6 @@ connect:
     svg_icon_id: podcast
     link: https://overcast.fm
 ---
-
-{% include header.html nav=page.nav %}
 
 {% include hero.html content=page.hero_html image=page.hero_image %}
 
@@ -104,26 +89,9 @@ connect:
 	</div>
 </section>
 
-{% include connect-icons.html %}
-
-<section class="connect padding-top">
+<section class="padding-top">
 	<div class="content">
 		<h1 class="editable">Bleibe auf dem Laufenden</h1>
 	</div>
-	<div class="grid">
-		{% for square in page.connect %}
-			<a href="{{ square.link }}">
-				<div class="icon">
-					<svg><use xlink:href="#icon-{{ square.svg_icon_id }}"></use></svg>
-				</div>
-				<div class="title">{{ square.title }}</div>
-			</a>
-		{% endfor %}
-	</div>
+	{% include squares.html squares=page.connect %}
 </section>
-
-<footer class="padding-vertical">
-	<div class="content">
-		{% include footer-berlin.html %}
-	</div>
-</footer>

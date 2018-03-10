@@ -1,0 +1,26 @@
+---
+layout: base
+nav:
+  - title: Home
+    path: /berlin
+  - title: Über uns
+    path: /berlin/about
+  - title: Equip
+    path: /berlin/equip
+  - title: Kleingruppen
+    path: /berlin/kleingruppen
+  - title: Podcast
+    path: 'https://overcast.fm/itunes977023058/equippers-berlin'
+  - title: Kontakt
+    path: '/berlin/#contact'
+---
+
+{% include header.html nav=layout.nav %}
+
+{{ content }}
+
+<footer class="padding-vertical">
+	<div class="content">
+		{% include footer-berlin.html %}
+	</div>
+</footer>
