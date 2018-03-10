@@ -1,7 +1,6 @@
 .squares
 	display: grid
 	grid-template-columns: repeat(2, 50vw)
-	color: $light
 
 	& > a
 	& > div
@@ -12,6 +11,8 @@
 		align-content: center
 		justify-content: center
 		text-align: center
+
+		addTransition(background-color)
 
 		&:nth-of-type(1)
 			background-color: $blue

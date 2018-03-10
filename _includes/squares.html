@@ -1,4 +1,15 @@
-{% comment %} see https://icomoon.io {% endcomment %}
+<div class="squares dark">
+	{% for square in include.squares %}
+		<a href="{{ square.link }}">
+			<div class="icon">
+				<svg><use xlink:href="#icon-{{ square.svg_icon_id }}"></use></svg>
+			</div>
+			<div class="title">{{ square.title }}</div>
+		</a>
+	{% endfor %}
+</div>
+
+{% comment %} see https://icomoon.io for icons {% endcomment %}
 
 <svg style="display: none">
 	<symbol id="icon-facebook" viewBox="0 0 32 32">
@@ -30,14 +41,3 @@
 		<path d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"></path>
 	</symbol>
 </svg>
-
-<div class="squares">
-	{% for square in include.squares %}
-		<a href="{{ square.link }}">
-			<div class="icon">
-				<svg><use xlink:href="#icon-{{ square.svg_icon_id }}"></use></svg>
-			</div>
-			<div class="title">{{ square.title }}</div>
-		</a>
-	{% endfor %}
-</div>
