@@ -33,6 +33,13 @@ strong
 article section
 	@extends .padding-vertical
 
+	&:not(:first-of-type) h1::before
+		content: ''
+		display: block
+		width: 4rem
+		border-top: 1px solid $dark
+		margin-bottom: 0.5rem
+
 	h1
 	h2
 	h3
