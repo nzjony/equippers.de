@@ -5,9 +5,10 @@ const header = document.querySelector('header');
 const navToggle = document.querySelector('header button');
 
 let timeOut = null;
+const clearTheTimeOut = () => clearTimeout(timeOut);
 
 const toggleMenu = () => {
-	clearTimeout(timeOut);
+	clearTheTimeOut();
 	header.classList.toggle('nav-visible');
 };
 
@@ -18,11 +19,14 @@ try {
 	(() => {
 		navToggle.addEventListener('click', toggleMenu);
 
-		// auto show desktop nav for home page
-		if (getUrlPathDepth() <= 1 && isDesktopNav()) {
-			toggleMenu();
+		// auto show desktop nav
+		toggleMenu();
+
+		if (isDesktopNav()) {
 			// toggle back after a few seconds
-			timeOut = setTimeout(toggleMenu, 10 * 1000);
+			timeOut = setTimeout(toggleMenu, (getUrlPathDepth() <= 1 ? 10 : 3) * 1000);
+			// interupt toggle back if nav gets hovered
+			document.querySelector('header nav').addEventListener('mouseover', clearTheTimeOut);
 		}
 	})();
 } catch (err) {
