@@ -13,22 +13,22 @@ events:
     description: Unsere jährliche Konferenz findet dieses Jahr am 2. und 3. November statt. Save the date!
 communities:
   - title: Youth
-    path: /berlin/youth
+    path: youth
     image: /images/CLRS.jpg
   - title: YA
-    path: /berlin/ya
+    path: ya
     image: /images/CLRS.jpg
   - title: Kids
-    path: /berlin/kids
+    path: kids
     image: /images/CLRS.jpg
   - title: Sistas
-    path: /berlin/sistas
+    path: sistas
     image: /images/CLRS.jpg
   - title: Kleingruppen
-    path: /berlin/kleingruppen
+    path: kleingruppen
     image: /images/CLRS.jpg
   - title: Praktikum
-    path: /berlin/praktikum
+    path: praktikum
     image: /images/CLRS.jpg
 connect:
   - title: Facebook
@@ -49,11 +49,11 @@ connect:
 
 <section>
 	<div class="editable content text-center">
-		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, dich durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
+		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, Menschen durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
 	</div>
 
 	<div class="content text-center padding-vertical">
-		<a href="/about" class="button outline white">Mehr über uns</a>
+		<a href="about" class="button outline white">Mehr über uns</a>
 
 		<h2 class="editable padding-top">Gottesdienst diesen Sonntag:</h2>
 		<p>
@@ -80,7 +80,7 @@ connect:
 		<h1 class="editable">Werde Teil</h1>
 		<div class="grid">
 			{% for community in page.communities %}
-				<a href="community.path" class="card">
+				<a href="{{ community.path }}" class="card">
 					<div class="img" style="background-image: url({{ community.image }})"></div>
 					<div class="title">{{ community.title }}</div>
 				</a>
