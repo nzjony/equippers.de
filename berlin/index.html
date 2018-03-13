@@ -29,22 +29,22 @@ promos:
     link: 'https://www.equipperschurch.com/music'
 communities:
   - title: Youth
-    path_: youth
+    href: youth
     image:
   - title: Junge Erwachsene
-    path_: ya
+    href: ya
     image:
   - title: Kids
-    path_: kids
+    href: kids
     image:
   - title: Sistas
-    path_: sistas
+    href: sistas
     image:
   - title: Kleingruppen
-    path_: kleingruppen
+    href: kleingruppen
     image:
   - title: Praktikum
-    path_: praktikum
+    href: praktikum
     image:
 connect:
   - title: Facebook
@@ -105,7 +105,7 @@ connect:
 		<h1 class="editable">Werde Teil</h1>
 		<div class="grid">
 			{% for community in page.communities %}
-				<a href="{{ community.path_ }}" class="card">
+				<a href="{{ community.href }}" class="card">
 					<div class="img" style="background-image: url({{ community.image }})"></div>
 					<div class="title">{{ community.title }}</div>
 				</a>
