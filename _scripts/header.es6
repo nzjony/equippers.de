@@ -19,10 +19,10 @@ try {
 	(() => {
 		navToggle.addEventListener('click', toggleMenu);
 
-		// auto show desktop nav
-		toggleMenu();
-
 		if (isDesktopNav()) {
+			// auto show desktop nav
+			toggleMenu();
+
 			// toggle back after a few seconds
 			timeOut = setTimeout(toggleMenu, (getUrlPathDepth() <= 1 ? 10 : 3) * 1000);
 			// interupt toggle back if nav gets hovered
