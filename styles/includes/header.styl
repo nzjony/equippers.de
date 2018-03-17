@@ -34,7 +34,7 @@ header
 
 	nav
 	&::after
-		addTransition(transform, 200ms)
+		addTransition(transform)
 		transform: translateX(-100%)
 
 	svg
@@ -90,15 +90,6 @@ header
 			a
 				font-size: 0.85em
 
-				// &.active:after
-				// 	content: ''
-				// 	display: block
-				// 	background: $white
-				// 	height: 4px
-				// 	width: 4px
-				// 	margin-left: calc(50% - 4px)
-				// 	border-radius: 50%
-
 // --
 // Burger Button
 
@@ -112,7 +103,7 @@ header button
 		height: 0.125em
 		display: block
 		background: $white
-		addTransition(transform, 200ms)
+		addTransition(transform)
 
 	.burger
 		burger-dash()
