@@ -93,7 +93,7 @@ connect:
 
 <section class="promos dark">
 	{% for promo in page.promos %}
-		<a href="{{ promo.link }}" class="square" style="background-image: url({{ promo.background_image }})">
+		<a href="{{ promo.link }}" class="square" style="background-image: url('{{ promo.background_image }}')">
 			<h2 class="uppercase no-margin">{{ promo.title }}</h2>
 			<p class="no-margin">{{ promo.subtitle }}</p>
 		</a>
@@ -106,7 +106,7 @@ connect:
 		<div class="grid">
 			{% for community in page.communities %}
 				<a href="{{ community.href }}" class="card">
-					<div class="img" style="background-image: url({{ community.image }})"></div>
+					<div class="img" style="background-image: url('{{ community.image }}')"></div>
 					<div class="title">{{ community.title }}</div>
 				</a>
 			{% endfor %}
