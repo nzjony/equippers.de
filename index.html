@@ -3,19 +3,19 @@ layout: base
 title: Equippers
 locations:
   - title: Berlin
-    path: /berlin
+    href: /berlin
     image: /uploads/berlin-1440.jpg
   - title: Hamburg
-    path: /hamburg
+    href: /hamburg
     image: /uploads/hamburg-1440.jpg
   - title: München
-    path: /muenchen
+    href: /muenchen
     image: /uploads/munich-1440.jpg
 ---
 
 <section class="landing dark">
 	{% for location in page.locations %}
-		<a href="{{ location.path }}" style="background-image: url('{{ location.image }}')">
+		<a href="{{ location.href }}" style="background-image: url('{{ location.image }}')">
 			<h1 class="uppercase">{{ location.title }}</h1>
 		</a>
 	{% endfor %}
