@@ -1,3 +1,16 @@
 addTransition(props, duration = 300ms)
-	will-change: unquote(props)
-	transition: unquote(props) duration
+// examples:
+//  - addTransition(color)
+//  - addTransition(color, 1s)
+//  - addTransition("color, background-color")
+//  - addTransition("color, background-color", 500ms)
+
+	$parts = ()
+	for prop in split(', ', props)
+		push($parts, prop)
+	will-change: unquote(join(', ', $parts))
+
+	$parts = ()
+	for prop in split(', ', props)
+		push($parts, (prop + ' ' + duration + ' ease'))
+	transition: unquote(join(', ', $parts))
