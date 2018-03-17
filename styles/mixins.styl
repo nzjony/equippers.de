@@ -1,19 +1,19 @@
 addTransition(props, duration = 300ms)
-// examples:
-//  - addTransition(color)
-//  - addTransition(color, 1s)
-//  - addTransition("color, background-color")
-//  - addTransition("color, background-color", 500ms)
+	// examples:
+	//  - addTransition(color)
+	//  - addTransition(color, 1s)
+	//  - addTransition("color, background-color")
+	//  - addTransition("color, background-color", 500ms)
 
 	$parts = ()
 	for prop in split(', ', props)
 		push($parts, prop)
-	will-change: unquote(join(', ', $parts))
+		will-change: unquote(join(', ', $parts))
 
 	$parts = ()
 	for prop in split(', ', props)
 		push($parts, (prop + ' ' + duration + ' ease'))
-	transition: unquote(join(', ', $parts))
+		transition: unquote(join(', ', $parts))
 
 addTransparentBackgroundOverlay()
 	position: relative
