@@ -23,20 +23,7 @@
 			border-top: border-width solid $yellow
 			border-bottom: border-width solid $yellow
 
-		// transparent overlay
-
-		position: relative
-
-		& > *
-			z-index: 1
-
-		&::after
-			content: ''
-			position: absolute
-			z-index: 0
-			width: 100%
-			height 100%
-			background-color: rgba(0, 0, 0, 0.3)
+		addTransparentBackgroundOverlay()
 
 	@media (min-width: $desktop-breakpoint)
 		grid-template-columns: repeat(3, 1fr)
