@@ -15,7 +15,7 @@
 		border: 1px solid #ddd
 		border-top: none
 		border-radius: 0 0 $border-radius $border-radius
-		background: #eee
+		background-color: #eee
 		text-align: center
 		text-transform: uppercase
 		@extends .black-font
@@ -24,10 +24,10 @@ a.card
 	text-decoration: none
 
 	.title
-		addTransition(text-decoration)
+		addTransition(background-color)
 
 	&:hover .title
-		text-decoration: underline
+		background-color: darken(#eee, 10%)
 
 	.img
 		addTransition(filter)
