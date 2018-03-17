@@ -29,6 +29,4 @@ try {
 			document.querySelector('header nav').addEventListener('mouseover', clearTheTimeOut);
 		}
 	})();
-} catch (err) {
-	console.error(err);
-}
+} catch (err) {}
