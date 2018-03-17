@@ -3,20 +3,20 @@ layout: base
 title: Equippers
 locations:
   - title: Berlin
-    href: /berlin
+    goes_to: /berlin
     image: /uploads/berlin-1440.jpg
   - title: Hamburg
-    href: /hamburg
+    goes_to: /hamburg
     image: /uploads/hamburg-3-1440.jpg
-    bg_position: 50% 70%
+    background_position: 50% 70%
   - title: München
-    href: /muenchen
+    goes_to: /muenchen
     image: /uploads/munich-1440.jpg
 ---
 
 <section class="landing dark">
 	{% for location in page.locations %}
-		<a href="{{ location.href }}" style="background-image: url('{{ location.image }}');{% if location.bg_position %}background-position: {{ location.bg_position }}{% endif %}">
+		<a href="{{ location.goes_to }}" style="background-image: url('{{ location.image }}');{% if location.background_position %}background-position: {{ location.background_position }}{% endif %}">
 			<h1 class="uppercase">{{ location.title }}</h1>
 		</a>
 	{% endfor %}
