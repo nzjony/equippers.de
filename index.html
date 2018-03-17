@@ -1,8 +1,22 @@
 ---
 layout: base
 title: Equippers
+locations:
+  - title: Berlin
+    path: /berlin
+    image:
+  - title: Hamburg
+    path: /hamburg
+    image:
+  - title: München
+    path: /muenchen
+    image:
 ---
 
-<a href="/berlin">Berlin</a>
-<a href="/hamburg">Hamburg</a>
-<a href="/muenchen">München</a>
+<section class="landing dark">
+	{% for location in page.locations %}
+		<a href="{{ location.path }}" style="background-image: url('{{ location.image }}')">
+			<h1 class="uppercase">{{ location.title }}</h1>
+		</a>
+	{% endfor %}
+</section>
