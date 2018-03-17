@@ -8,6 +8,7 @@ locations:
   - title: Hamburg
     href: /hamburg
     image: /uploads/hamburg-2-1440.jpg
+    bg_position: 50% 70%
   - title: München
     href: /muenchen
     image: /uploads/munich-1440.jpg
@@ -15,7 +16,7 @@ locations:
 
 <section class="landing dark">
 	{% for location in page.locations %}
-		<a href="{{ location.href }}" style="background-image: url('{{ location.image }}')">
+		<a href="{{ location.href }}" style="background-image: url('{{ location.image }}');{% if location.bg_position %}background-position: {{ location.bg_position }}{% endif %}">
 			<h1 class="uppercase">{{ location.title }}</h1>
 		</a>
 	{% endfor %}
