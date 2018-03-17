@@ -14,16 +14,22 @@
 		justify-content: center
 		text-align: center
 
+		addTransparentBackgroundOverlay()
+
 		// hover effect
 
+		$effect-size = 1rem
+
+		border: 0px solid $yellow
 		addTransition(border)
-
 		&:hover
-			border-width = 0.5em
-			border-top: border-width solid $yellow
-			border-bottom: border-width solid $yellow
+			border-bottom-width: $effect-size
 
-		addTransparentBackgroundOverlay()
+		h2
+			addTransition(padding-top)
+		&:hover
+			h2
+				padding-top: $effect-size
 
 	@media (min-width: $desktop-breakpoint)
 		grid-template-columns: repeat(3, 1fr)
