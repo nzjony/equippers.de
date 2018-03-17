@@ -14,3 +14,17 @@ addTransition(props, duration = 300ms)
 	for prop in split(', ', props)
 		push($parts, (prop + ' ' + duration + ' ease'))
 	transition: unquote(join(', ', $parts))
+
+addTransparentBackgroundOverlay()
+	position: relative
+
+	& > *
+		z-index: 1
+
+	&::after
+		content: ''
+		position: absolute
+		z-index: 0
+		width: 100%
+		height 100%
+		background-color: rgba(0, 0, 0, 0.3)
