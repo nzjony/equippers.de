@@ -6,8 +6,14 @@ html
 
 body
 	overflow-x: hidden
-	background-color: $light
-	color: $dark
+
+button
+	cursor: pointer
+
+section
+	for bg-color in 'light-gray'
+		&.{bg-color}
+			background-color: $ + unquote(bg-color)
 
 .content
 	@extends .padding-horizontal

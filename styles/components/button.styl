@@ -1,15 +1,18 @@
 .button
 	display: inline-block
 	padding: 0.75em 1.5em
-	border-radius: 3px
+	border: 1px solid
+	border-color: darken($light-gray, 10%)
+	border-radius: $border-radius
 	text-decoration: none
 	background-color: $light-gray
-	color: $dark-gray
+	color: $dark
 	addTransition('background-color, color')
 
 	&:hover
-		background-color: $black
-		color: $white
+		background-color: @border-color
+		color: darken(@color, 10%)
+
 
 	&::before
 		content: '\0000BB'
@@ -17,11 +20,19 @@
 		font-size: 1.4em
 		line-height: 0
 
-
 	&.outline
-		border: 1px solid
+		border-color: $dark
+		background-color: transparent
 
-	&.white
-		background-color: $white
 		&:hover
-			background-color: $black
+			background-color: $dark
+			color: $light
+
+	for value in ('dark' 'light') ('green' 'light') ('yellow' 'dark')
+		&.{value[0]}
+			background-color: $ + unquote(value[0])
+			color: $ + unquote(value[1])
+			border-color: darken(@background-color, 10%)
+
+			&:hover
+				background-color: @border-color
