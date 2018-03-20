@@ -3,6 +3,7 @@
 		{% include logo.html %}
 	</a>
 
+{% if include.nav %}
 	<nav>
 		{% for link in include.nav %}
 			<a href="{{ link.goes_to }}">{{ link.title }}</a>
@@ -12,4 +13,5 @@
 	<button aria-label="toggle menu">
 		<span class="burger"></span>
 	</button>
+{% endif %}
 </header>
