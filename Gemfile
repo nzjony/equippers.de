@@ -1,6 +1,8 @@
 # > bundle install
 # > bundle exec jekyll serve
 
+source 'https://rubygems.org'
+
 gem 'jekyll', '3.7.2'
 
 group :jekyll_plugins do
