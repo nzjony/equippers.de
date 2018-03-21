@@ -14,6 +14,10 @@ locations:
     image: /uploads/munich-1440.jpg
 ---
 
+<section class="landing-logo">
+	{% include logo.html %}
+</section>
+
 <section class="landing dark">
 	{% for location in page.locations %}
 		<a href="{{ location.goes_to }}" style="background-image: url('{{ location.image }}');{% if location.background_position %}background-position: {{ location.background_position }}{% endif %}">
