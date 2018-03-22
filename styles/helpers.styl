@@ -24,6 +24,12 @@
 	@extends .no-margin-top
 	@extends .no-margin-bottom
 
+.no-margin-to-next
+	margin-bottom: 0
+
+	& ~ *
+		margin-top: 0
+
 // --
 // Paddings
 
@@ -46,6 +52,23 @@
 .padding-horizontal
 	@extends .padding-left
 	@extends .padding-right
+
+.no-padding
+	padding: 0
+
+.no-padding-top
+	padding-top: 0
+
+.no-padding-bottom
+	padding-bottom: 0
+
+.no-padding-vertical
+	padding-top: 0
+	padding-botom: 0
+
+.no-padding-horizontal
+	padding-left: 0
+	padding-right: 0
 
 // --
 // Typography
