@@ -1,9 +1,10 @@
 ---
-hero_html: <h1>Startup München</h1>
-hero_image: /uploads/munich-1440.jpg
+hero:
+  html: <h1>Startup München</h1>
+  image: /uploads/munich-1440.jpg
 ---
 
-{% include hero.html content=page.hero_html image=page.hero_image %}
+{% include hero.html options=page.hero %}
 
 <section class="light-gray padding-vertical">
 	<div class="editable content">

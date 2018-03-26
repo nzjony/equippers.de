@@ -1,7 +1,8 @@
 ---
 title: Über Equippers Berlin
-hero_html: <h1>Über uns</h1>
-hero_image:
+hero:
+  html: <h1>Über uns</h1>
+  image: /uploads/about-hero.jpg
 heart_beats:
   - title: Honour
     description: Wir streben danach, Gott, Gottes Wort und einander zu ehren.
@@ -15,7 +16,7 @@ heart_beats:
     description: Wir lieben es, das Leben gemeinsam zu leben. Wir sind nicht nur zusammen im selben Raum, sondern zusammen zusammen. Wir teilen die gemeinsame Vision, Gott und andere zu lieben.
 ---
 
-{% include hero.html content=page.hero_html image=page.hero_image %}
+{% include hero.html options=page.hero %}
 
 <article>
 	<section class="editable content">
