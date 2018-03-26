@@ -1,18 +1,18 @@
 .card
-	border-radius: $border-radius
+	addBorderRadius()
 
 	.img
 		padding-bottom: 56.25% // 16:9
 		background-color: $medium-gray
 		background-size: cover
 		background-position: center
-		border-radius: $border-radius $border-radius 0 0
+		border-radius: @border-radius @border-radius 0 0
 
 	.title
 		padding: 1em
 		border: 1px solid #ddd
 		border-top: none
-		border-radius: 0 0 $border-radius $border-radius
+		border-radius: 0 0 @border-radius @border-radius
 		background-color: #eee
 		text-align: center
 		text-transform: uppercase

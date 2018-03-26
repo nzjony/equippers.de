@@ -32,7 +32,7 @@ heart_beats:
 	<div class="heart-beats padding-bottom">
 		{% for beat in page.heart_beats %}
 			<div class="beat text-center">
-				<div class="drop-cap no-margin-vertical">{{ beat.title | slice: 0 }}</div>
+				<h2 class="drop-cap no-margin-vertical">{{ beat.title | slice: 0 }}</h2>
 				<h4 class="no-margin-top">{{ beat.title }}</h4>
 				<p class="padding-horizontal">{{ beat.description }}</p>
 			</div>
