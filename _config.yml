@@ -9,3 +9,25 @@ assets:
     js: { integrity: false }
   sources:
     - _scripts
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "base"
+  - scope:
+      path: "berlin"
+      type: "pages"
+    values:
+      layout: "berlin"
+  - scope:
+      path: "hamburg"
+      type: "pages"
+    values:
+      layout: "hamburg"
+  - scope:
+      path: "muenchen"
+      type: "pages"
+    values:
+      layout: "muenchen"
