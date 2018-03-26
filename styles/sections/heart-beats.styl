@@ -1,12 +1,15 @@
 .heart-beats
-	display: grid
-	grid-template-columns: 1fr
-	grid-gap: 2rem
+	makeGrid()
+	align-items: start
+
+	max-width: 90%
+	margin: 0 auto
 
 	@media(min-width: $desktop-breakpoint)
 		grid-template-columns: repeat(5, 1fr)
-		max-width: 90%
-		margin: 0 auto
+
+		p
+		font-size: 0.9em
 
 	.beat
 		background-color: $light-gray
@@ -16,6 +19,3 @@
 		@extends .black-font
 		font-size: 5em
 		line-height: 1
-
-	p
-		font-size: 0.9em

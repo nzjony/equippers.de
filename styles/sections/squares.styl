@@ -1,13 +1,13 @@
 .squares
-	display: grid
-	grid-template-columns: repeat(2, 50vw)
+	makeGrid(cols: repeat(2, 50vw), gap: 0)
 
 	& > a
 	& > div
 		text-decoration: none
 
 		height: 50vw
-		display: grid
+
+		makeGrid(gap: 0)
 		align-content: center
 		justify-content: center
 		text-align: center
