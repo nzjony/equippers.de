@@ -1,8 +1,12 @@
 ---
 title: 404 Not Found :( Equippers
+hero:
+  html: <h1>Fehler 404 😭</h1>
 ---
 
-{% include hero.html content="<h1>Fehler 404 😭</h1>" %}
+{% include header.html %}
+
+{% include hero.html options=page.hero %}
 
 <section class="text-center padding-vertical">
 	<div class="content">
