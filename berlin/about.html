@@ -27,15 +27,15 @@ heart_beats:
 
 	<section class="editable content">
 		<h1>Unsere Werte</h1>
-		<p>Wenn Menschen zusammenkommen und sich mit abgemachten Werten für ein gemeinsames Ziel vereinen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge. Wenn du mehr über unsere Kultur und Werte erfahren willst, besuche unseren Kurs <a href="/berlin/equip">Equip</a>.</p>
+		<p>Wenn Menschen zusammenkommen und sich mit vereinbarten Werten für ein gemeinsames Ziel einsetzen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge. Wenn du mehr über unsere Kultur und Werte erfahren willst, besuche doch unseren Kurs <a href="/berlin/equip">Equip</a>.</p>
 	</section>
 
 	<div class="heart-beats padding-bottom">
 		{% for beat in page.heart_beats %}
-			<div class="beat text-center">
-				<h2 class="drop-cap no-margin-vertical">{{ beat.title | slice: 0 }}</h2>
-				<h4 class="no-margin-top">{{ beat.title }}</h4>
-				<p class="padding-horizontal">{{ beat.description }}</p>
+			<div class="beat padding text-center">
+				<h2 class="drop-cap no-margin-top no-margin-after">{{ beat.title | slice: 0 }}</h2>
+				<h4>{{ beat.title }}</h4>
+				<p>{{ beat.description }}</p>
 			</div>
 		{% endfor %}
 	</div>
@@ -48,7 +48,7 @@ heart_beats:
 
 	<section class="editable content">
 		<h1>Equippers Netzwerk</h1>
-		<p>Equippers Berlin ist Teil eines <a href="https://www.equipperschurch.com">weltweiten Netzwerks</a> von mehr als zwanzig Kirchen, das beständig wächst. Durch den apostolischen Dienst von Pastor Bruce Monk aus Neuseeland entstehen überall auf der Welt wachsende, gesunde Kirchen. Gemeinsam können wir einen größeren Einfluss darauf haben, das Evangelium weiterzugeben. Neben den Kirchen gibt es auch das <a href="https://equipperscollege.com">Equippers College</a> in Auckland.</p>
+		<p>Equippers Berlin ist Teil einer <a href="https://www.equipperschurch.com">weltweiten Familie</a> von mehr als zwanzig Kirchen, die beständig wächst. Durch den apostolischen Dienst von Pastor Bruce Monk aus Neuseeland entstehen überall auf der Welt wachsende, gesunde Kirchen. Gemeinsam können wir einen größeren Einfluss darauf haben, das Evangelium weiterzugeben. Neben den Kirchen gibt es auch das <a href="https://equipperscollege.com">Equippers College</a> in Auckland.</p>
 	</section>
 
 	<section class="editable content">
