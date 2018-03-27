@@ -5,11 +5,13 @@ locations:
     goes_to: /berlin
     image: /uploads/berlin-1440.jpg
   - title: Hamburg
-    goes_to: /hamburg
+    sub_title: (Coming Soon)
+    # goes_to: /hamburg
     image: /uploads/hamburg-3-1440.jpg
     background_position: 50% 70%
   - title: München
-    goes_to: /muenchen
+    sub_title: (Coming Soon)
+    # goes_to: /muenchen
     image: /uploads/munich-1440.jpg
 ---
 
@@ -19,8 +21,16 @@ locations:
 
 <section class="landing dark">
 	{% for location in page.locations %}
-		<a href="{{ location.goes_to }}" style="background-image: url('{{ location.image }}');{% if location.background_position %}background-position: {{ location.background_position }}{% endif %}">
-			<h1 class="uppercase">{{ location.title }}</h1>
+		<a
+			{% if location.goes_to %}href="{{ location.goes_to }}"{% endif %}
+			class="text-center"
+			style="
+				background-image: url('{{ location.image }}');
+				{% if location.background_position %}background-position: {{ location.background_position }}{% endif %}
+			"
+		>
+			<h1 class="uppercase no-margin">{{ location.title }}</h1>
+			{% if location.sub_title %}<p class="no-margin">{{ location.sub_title }}</p>{% endif %}
 		</a>
 	{% endfor %}
 </section>
