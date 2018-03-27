@@ -7,8 +7,7 @@ stylus:
 
 assets:
   compression: false
-  js:
-    integrity: false
+  js: { integrity: false }
   sources:
     - _scripts
 
