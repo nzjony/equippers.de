@@ -6,7 +6,9 @@ stylus:
   path: styles
 
 assets:
-  compression: true
+  compression: false
+  js:
+    integrity: false
   sources:
     - _scripts
 
