@@ -1,12 +1,11 @@
 timezone: Europe/Berlin
 
 stylus:
-  compress: true
+  compression: true
   path: styles
 
 assets:
-  defaults:
-    js: { integrity: false }
+  compression: true
   sources:
     - _scripts
 
