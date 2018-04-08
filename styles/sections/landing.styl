@@ -14,7 +14,7 @@
 .landing
 	height: 90vh
 
-	makeGrid(gap: 0)
+	makeGrid(1fr, gap: 0)
 	grid-template-rows: repeat(3, 1fr)
 
 	a
@@ -26,7 +26,7 @@
 		@media (min-width: $tablet-breakpoint)
 			font-size: 1.25em
 
-		makeGrid(gap: 0)
+		makeGrid(1fr, gap: 0)
 		align-content: center
 
 		border: 0px solid $yellow

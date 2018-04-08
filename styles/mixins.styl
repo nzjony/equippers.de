@@ -6,9 +6,9 @@ addBorderRadius(r = 0.1875rem)
 
 // --
 // Make Grid
-makeGrid(cols = 1fr, gap = 1em)
+makeGrid(cols, rows = initial, gap = 1em)
 	display: grid
-	grid-template-columns: cols
+	grid-template: cols / rows
 	grid-gap: gap
 
 // --
