@@ -37,15 +37,7 @@ heart_beats:
 		<p>Wenn Menschen zusammenkommen und sich mit vereinbarten Werten für ein gemeinsames Ziel einsetzen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge. Wenn du mehr über unsere Kultur und Werte erfahren willst, besuche doch unseren Kurs <a href="/berlin/equip">Equip</a>.</p>
 	</section>
 
-	<div class="heart-beats padding-bottom">
-		{% for beat in page.heart_beats %}
-			<div class="beat padding text-center">
-				<h2 class="drop-cap no-margin-top no-margin-after">{{ beat.title | slice: 0 }}</h2>
-				<h4>{{ beat.title }}<br><i class="normal-text">{{ beat.translation }}</i></h4>
-				<p>{{ beat.description }}</p>
-			</div>
-		{% endfor %}
-	</div>
+	{% include heart-beats.html heart_beats=page.heart_beats %}
 
 	<section class="editable content">
 		<h1>Unser Pastor</h1>
