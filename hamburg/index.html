@@ -1,26 +1,58 @@
-<style>
-	.wrapper {
-		display: grid;
-		grid-template-columns: repeat(5, 1fr)
-	}
+---
+hero:
+  html: <h1>Startup Hamburg</h1>
+  image: /uploads/hamburg-3-1440.jpg
+heart_beats:
+  - title: Honour
+    translation: Ehre
+    description: Wir streben danach, Gott, Gottes Wort und einander zu ehren.
+  - title: Excel
+    translation: Exzellenz
+    description: Wir glänzen durch Exzellenz. Wir geben Gott das Beste unserer Zeit, unserer Talente und unserer Resourcen.
+  - title: Advance
+    translation: Einsatz
+    description: Größe erreichen wir, indem wir Menschen dienen und Jesus ähnlicher werden. Wir bringen das Königreich Gottes voran, wenn wir unsere Gaben einsetzen, um Gott, der Stadt und einander zu dienen.
+  - title: Reach Out
+    translation: Evangelisation
+    description: Wir sind vorsätzlich darin, uns nach denen auszustrecken, die uns nahe, aber Gott fern sind.
+  - title: Together
+    translation: Einheit
+    description: Wir lieben es, das Leben gemeinsam zu leben. Wir sind nicht nur zusammen im selben Raum, sondern zusammen zusammen. Wir teilen die gemeinsame Vision, Gott und andere zu lieben.
+---
 
-	div {
-		margin: 1em;
-		height: 5em;
-	}
-</style>
+{% include hero.html options=page.hero %}
 
-<div class="wrapper">
-	<div style="background: #04090b"></div>
-	<div style="background: #1a1a1a"></div>
-	<div style="background: #878783"></div>
-	<div style="background: #eaeae9"></div>
-	<div style="background: #fffcfb"></div>
-	<div style="background: #453f78"></div>
-	<div style="background: #42a36f"></div>
-	<div style="background: #ffd279"></div>
-	<div style="background: #fc9f5b"></div>
-	<div style="background: #fe4a49"></div>
-	<div style="background: #a63446"></div>
-	<div style="background: #ea262e"></div>
-</div>
+<section class="light-gray padding-vertical">
+	<div class="editable content">
+		<h3>Wir starten eine Equippers Kirche in Hamburg!</h3>
+		<p>Willst du mehr wissen? Lass uns deine Email-Adresse da und wir schicken dir alle Infos zu unseren nächsten Treffen.</p>
+	</div>
+</section>
+
+{% include newsletter.html %}
+
+<article>
+	<section class="editable content">
+		<h2>Über Uns</h2>
+
+		<h3>Unsere Familie</h3>
+		<p>Equippers München ist Teil einer weltweiten Familie von über zwanzig Kirchen, die beständig wächst. Durch den apostolischen Dienst von Pastor Bruce Monk aus Neuseeland entstehen überall auf der Welt wachsende, gesunde Kirchen. Gemeinsam können wir einen größeren Einfluss darauf haben, das Evangelium weiterzugeben.</p>
+	</section>
+
+	<section class="editable content">
+		<h3>Unsere Mission</h3>
+		<p>Wir wollen die ganze Kirche für ihre Mission ausrüsten und freisetzen. Wir glauben, dass jeder Christ zum Dienen berufen ist, nicht nur ein paar Auserwählte. Erziehung, Bildung, Sport, Gesundheitswesen, Geschäftswelt, Politik, Medien, Kunst, Entertainment, Familie... egal, für welchen Teil unserer Gesellschaft Gott dich berufen hat, wir wollen füreinander einstehen und dich anfeuern, damit du das Reich Gottes in deine Welt bringen kannst.</p>
+	</section>
+
+	<section class="editable content">
+		<h3>Unsere Werte</h3>
+		<p>Wenn Menschen zusammenkommen und sich mit vereinbarten Werten für ein gemeinsames Ziel einsetzen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge.</p>
+	</section>
+
+	{% include heart-beats.html heart_beats=page.heart_beats %}
+
+	<section class="editable content">
+		<h3>Unser Glaube</h3>
+		<p>Wir glauben an Gott, den Vater, den Allmächtigen, den Schöpfer des Himmels und der Erde. Und an Jesus Christus, seinen eingeborenen Sohn, unsern Herrn, empfangen durch den Heiligen Geist, geboren von der Jungfrau Maria, gelitten unter Pontius Pilatus, gekreuzigt, gestorben und begraben, hinab gestiegen in das Reich des Todes, am dritten Tage auferstanden von den Toten, aufgefahren in den Himmel; er sitzt zur Rechten Gottes, des allmächtigen Vaters; von dort wird er kommen, zu richten die Lebenden und die Toten. Wir glauben an den Heiligen Geist, die heilige christliche Kirche, Gemeinschaft der Heiligen, Vergebung der Sünden, Auferstehung der Toten und das ewige Leben.</p>
+	</section>
+</article>
