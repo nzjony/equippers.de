@@ -5,22 +5,6 @@ hero:
 mailchimp_options:
   action: https://equippers.us17.list-manage.com/subscribe/post?u=53e3fada419ead2b99592a5b7&amp;id=d643cbbe24
   fake_input_name: b_53e3fada419ead2b99592a5b7_d643cbbe24
-heart_beats:
-  - title: Honour
-    translation: Ehre
-    description: Wir streben danach, Gott, Gottes Wort und einander zu ehren.
-  - title: Excel
-    translation: Exzellenz
-    description: Wir glänzen durch Exzellenz. Wir geben Gott das Beste unserer Zeit, unserer Talente und unserer Resourcen.
-  - title: Advance
-    translation: Einsatz
-    description: Größe erreichen wir, indem wir Menschen dienen und Jesus ähnlicher werden. Wir bringen das Königreich Gottes voran, wenn wir unsere Gaben einsetzen, um Gott, der Stadt und einander zu dienen.
-  - title: Reach Out
-    translation: Evangelisation
-    description: Wir sind vorsätzlich darin, uns nach denen auszustrecken, die uns nahe, aber Gott fern sind.
-  - title: Together
-    translation: Einheit
-    description: Wir lieben es, das Leben gemeinsam zu leben. Wir sind nicht nur ein Haufen Leute, die sich im selben Raum treffen, sondern zusammen zusammen wie eine Familie. Wir teilen die gemeinsame Vision, Gott und andere zu lieben.
 ---
 
 {% include hero.html options=page.hero %}
@@ -52,7 +36,7 @@ heart_beats:
 		<p>Wenn Menschen zusammenkommen und sich mit vereinbarten Werten für ein gemeinsames Ziel einsetzen, werden sie zu einer unaufhaltsamen Kraft. Die Bibel sagt in Sprüche 4, dass aus unserem Herzen das Leben fließt. Um uns zu helfen, eine gesunde Kultur zu erhalten, drücken wir unsere Werte deshalb mit dem einfach zu merkenden Akronym <strong>HEART</strong> aus. Das sind unsere Herzschläge.</p>
 	</section>
 
-	{% include heart-beats.html heart_beats=page.heart_beats %}
+	{% include heart-beats.html heart_beats=site.data.heart_beats %}
 
 	<section class="editable content">
 		<h3>Unser Glaube</h3>
