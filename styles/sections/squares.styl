@@ -1,11 +1,9 @@
 .squares
-	makeGrid(repeat(2, 50vw), gap: 0)
+	makeGrid(repeat(2, 50vw), repeat(2, 50vw), 0)
 
 	& > a
 	& > div
 		text-decoration: none
-
-		height: 50vw
 
 		makeGrid(1fr, gap: 0)
 		align-content: center
@@ -42,8 +40,4 @@
 				height: @width
 
 	@media (min-width: $tablet-breakpoint)
-		grid-template-columns: repeat(4, 25vw)
-
-		& > a
-		& > div
-			height: 25vw
+		makeGrid(repeat(4, 25vw), 25vw, 0)
