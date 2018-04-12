@@ -2,6 +2,9 @@
 hero:
   html: <h1>Startup Hamburg</h1>
   image: /uploads/hamburg-3-1440.jpg
+mailchimp_options:
+  action: https://facebook.us17.list-manage.com/subscribe/post?u=c3cbc3d3916c89cb826885234&amp;id=02265232f7
+  fake_input_name: b_c3cbc3d3916c89cb826885234_02265232f7
 heart_beats:
   - title: Honour
     translation: Ehre
@@ -29,7 +32,7 @@ heart_beats:
 	</div>
 </section>
 
-{% include newsletter.html %}
+{% include newsletter.html options=page.mailchimp_options %}
 
 <article>
 	<section class="editable content">

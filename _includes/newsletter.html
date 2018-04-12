@@ -1,10 +1,12 @@
 <section class="newsletter light-gray">
-	<form action="" method="post" class="content">
+	<form action="{{ include.options.action }}" target="_blank" method="post" class="content">
 		<label for="name">Vorname:</label>
-		<input type="text" name="name" id="name" placeholder="Kim">
+		<input type="text" name="FNAME" id="name" placeholder="Kim" required>
 
 		<label for="email">Email:</label>
-		<input type="email" name="email" id="email" placeholder="kim@gmail.com">
+		<input type="email" name="EMAIL" id="email" placeholder="kim@gmail.com" required>
+
+		<input type="text" style="display: none" name="{{ include.options.fake_input_name }}" tabindex="-1" value="">
 
 		<button type="submit" class="dark button">Anmelden</button>
 	</form>
