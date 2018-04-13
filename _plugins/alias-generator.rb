@@ -2,13 +2,6 @@
 
 module Jekyll
 
-	class PageWithoutAFile < Page
-		def read_yaml(*)
-			@data ||= {}
-		end
-	end
-
-
 	class AliasGenerator < Generator
 
 		def generate(site)
@@ -26,20 +19,8 @@ module Jekyll
 
 		def process_pages()
 			@site.pages.each do |page|
-				generate_aliases(page, '/' + page.url)
+				generate_aliases(page, page.url)
 			end
-		end
-
-		def get_template_source_path(file = "alias-template.html")
-			File.expand_path file, __dir__
-		end
-
-		def get_alias_from_template(dest_path, go_to)
-			alias_page = PageWithoutAFile.new(@site, __dir__, "", dest_path)
-			alias_page.content = File.read(get_template_source_path)
-			alias_page.data['layout'] = nil
-			alias_page.data['go_to'] = go_to
-			alias_page
 		end
 
 		def generate_aliases(page, go_to)
@@ -58,10 +39,8 @@ module Jekyll
 
 				FileUtils.mkdir_p(fs_path_to_dir)
 
-				file_path = File.join(fs_path_to_dir, alias_file)
-				alias_page = get_alias_from_template(file_path, go_to)
-				File.open(file_path, 'w') do |file|
-					file.write(alias_page)
+				File.open(File.join(fs_path_to_dir, alias_file), 'w') do |file|
+					file.write(alias_template(@site.config['url'], go_to))
 				end
 
 				alias_sections.size.times do |sections|
@@ -69,6 +48,19 @@ module Jekyll
 				end
 				@site.static_files << Jekyll::AliasFile.new(@site, @site.dest, alias_dir, alias_file)
 			end
+		end
+
+		def alias_template(site_url, go_to)
+<<-EOF
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="canonical" href="#{site_url}#{go_to}">
+		<meta http-equiv="refresh" content="0;url=#{site_url}#{go_to}">
+	</head>
+</html>
+EOF
 		end
 	end
 
