@@ -3,11 +3,11 @@
 		{% include logo.html %}
 	</a>
 
+{% if include.nav %}
 	<button aria-label="toggle mobile navigation">
 		<span class="burger"></span>
 	</button>
 
-{% if include.nav %}
 	<nav>
 		{% for link in include.nav %}
 			<a href="{{ link.goes_to }}">{{ link.title }}</a>
