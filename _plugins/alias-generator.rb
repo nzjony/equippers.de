@@ -18,15 +18,15 @@ module Jekyll
 			process_pages()
 		end
 
-		def process_posts()
-			@site.posts.docs.each do |post|
-				generate_aliases(post, post.url)
-			end
-		end
+		# def process_posts()
+		# 	@site.posts.docs.each do |post|
+		# 		generate_aliases(post, post.url)
+		# 	end
+		# end
 
 		def process_pages()
 			@site.pages.each do |page|
-				generate_aliases(page, page.path.gsub(/(\/index)?.html$/, ''))
+				generate_aliases(page, '/' + page.url)
 			end
 		end
 
@@ -63,8 +63,6 @@ module Jekyll
 				File.open(file_path, 'w') do |file|
 					file.write(alias_page)
 				end
-
-				@site.pages << alias_page
 
 				alias_sections.size.times do |sections|
 					@site.static_files << Jekyll::AliasFile.new(@site, @site.dest, alias_sections[0, sections + 1].join('/'), '')
