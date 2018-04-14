@@ -7,23 +7,22 @@ module Jekyll
 		def generate(site)
 			@site = site
 
-			# process_posts() # not sure if this works properly
 			process_pages()
 		end
 
-		# def process_posts()
-		# 	@site.posts.docs.each do |post|
-		# 		generate_aliases(post, post.url)
-		# 	end
-		# end
-
 		def process_pages()
 			@site.pages.each do |page|
-				generate_aliases(page, page.url)
+				generate_aliases(page)
 			end
 		end
 
-		def generate_aliases(page, go_to)
+		def process_collection(name)
+			@site.collections[name].docs.each do |item|
+				generate_aliases(item)
+			end
+		end
+
+		def generate_aliases(page)
 			alias_paths ||= Array.new
 			alias_paths << page.data['aliases']
 			alias_paths.compact!
@@ -40,7 +39,7 @@ module Jekyll
 				FileUtils.mkdir_p(fs_path_to_dir)
 
 				File.open(File.join(fs_path_to_dir, alias_file), 'w') do |file|
-					file.write(alias_template(@site.config['url'], go_to))
+					file.write(alias_template(page.url))
 				end
 
 				alias_sections.size.times do |sections|
@@ -50,14 +49,14 @@ module Jekyll
 			end
 		end
 
-		def alias_template(site_url, go_to)
+		def alias_template(goes_to)
 <<-EOF
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
-		<link rel="canonical" href="#{site_url}#{go_to}">
-		<meta http-equiv="refresh" content="0;url=#{site_url}#{go_to}">
+		<link rel="canonical" href="#{@site.config['url']}#{goes_to}">
+		<meta http-equiv="refresh" content="0;url=#{@site.config['url']}#{goes_to}">
 	</head>
 </html>
 EOF
