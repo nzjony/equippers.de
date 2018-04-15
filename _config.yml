@@ -33,3 +33,12 @@ defaults:
       type: "pages"
     values:
       layout: "muenchen"
+
+# Cloudcannon
+
+locations:
+  - title:
+    sub_title:
+    goes_to:
+    image:
+    background_position:
