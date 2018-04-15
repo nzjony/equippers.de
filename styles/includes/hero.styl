@@ -14,7 +14,8 @@
 	.content
 		text-align: center
 		text-transform: uppercase
-		margin-top: 2.25rem // fixes header height and h1 margin
+		margin-top: 2.25rem // compensates for header height and h1 margin
+		@extend .padding-vertical
 
 		@media (min-width: $tablet-breakpoint)
 			font-size: 1.25em
