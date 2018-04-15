@@ -1,0 +1,50 @@
+berlin:
+  name: Equippers Berlin e. V.
+  address: Blissestr. 2, 10713 Berlin
+  email: mail@equippers.de
+  phone: '+493031804840'
+  phone_formatted: +49 (0)30 3180 4840
+  links:
+    - title: Facebook
+      goes_to: https://www.facebook.com/equippersberlin
+    - title: Instagram
+      goes_to: https://www.instagram.com/equippersberlin/
+    - title: Twitter
+      goes_to: https://twitter.com/equippersberlin
+    - title: Google+
+      goes_to: https://plus.google.com/+EquippersDe
+  bank_account:
+    owner: Equippers Berlin e. V.
+    iban: DE39100500000190371552
+    bic: BELADEBE
+    bank_name: Berliner Sparkasse
+hamburg:
+  name: Equippers Start-Up Hamburg
+  address: Offenbachweg 27, 22145 Hamburg
+  email: hamburg@equippers.de
+  phone: '+493031804840'
+  phone_formatted: +49 (0)30 3180 4840
+  links:
+    - title: Facebook
+      goes_to: https://www.facebook.com/EquippersStartUpHamburg
+    - title: Instagram
+      goes_to: https://www.instagram.com/equippersstartuphamburg/
+  bank_account:
+    owner:
+    iban:
+    bic:
+    bank_name:
+muenchen:
+  name: Equippers Start-Up München
+  address: Geltinger Straße 22, 81379 München
+  email: muenchen@equippers.de
+  phone: '+493031804840'
+  phone_formatted: +49 (0)30 3180 4840
+  links:
+    - title: Instagram
+      goes_to: https://www.instagram.com/equippersmuenchen/
+  bank_account:
+    owner:
+    iban:
+    bic:
+    bank_name:
