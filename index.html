@@ -2,21 +2,20 @@
 title: Equippers
 locations:
   - title: Berlin
+    sub_title:
     goes_to: /berlin
-    image: /uploads/berlin-1440.jpg
+    background_image: /uploads/berlin-1440.jpg
+    background_image_position:
   - title: Hamburg
+    sub_title:
     goes_to: /hamburg
-    image: /uploads/hamburg-4-1440.jpg
+    background_image: /uploads/hamburg-4-1440.jpg
+    background_image_position:
   - title: München
+    sub_title:
     goes_to: /muenchen
-    image: /uploads/munich-1440.jpg
-_defaults:
-  locations:
-    - title:
-      sub_title:
-      goes_to:
-      image:
-      background_position:
+    background_image: /uploads/munich-1440.jpg
+    background_image_position:
 ---
 
 <section class="landing-logo">
@@ -29,8 +28,8 @@ _defaults:
 			{% if location.goes_to %}href="{{ location.goes_to }}"{% endif %}
 			class="text-center"
 			style="
-				background-image: url('{{ location.image }}');
-				{% if location.background_position %}background-position: {{ location.background_position }}{% endif %}
+				background-image: url('{{ location.background_image }}');
+				{% if location.background_image_position %}background-position: {{ location.background_image_position }}{% endif %}
 			"
 		>
 			<h1 class="uppercase no-margin">{{ location.title }}</h1>
