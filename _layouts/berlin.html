@@ -1,19 +1,8 @@
 ---
 layout: base
-nav:
-  - title: Home
-    goes_to: /berlin
-  - title: Über uns
-    goes_to: /berlin/about
-  - title: Equip
-    goes_to: /berlin/equip
-  - title: Kleingruppen
-    goes_to: /berlin/kleingruppen
-  - title: Podcast
-    goes_to: https://overcast.fm/itunes977023058/equippers-berlin
 ---
 
-{% include header.html nav=layout.nav %}
+{% include header.html nav=site.data.navigation.berlin %}
 
 {{ content }}
 
