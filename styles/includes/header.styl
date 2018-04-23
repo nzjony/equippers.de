@@ -166,26 +166,32 @@ header
 
 
 // --
-// Fix
+// Non-Grid Fallback
 
 non-grid-header-props =
-	&
-	nav
-		display: block
+	& + *
+		padding-top: 0
 
-	position: relative !important
 	height: auto
 	text-align: center
 	background: lighten(black, 20%)
 
-	a[aria-label="logo"]
-		display: inline-block
-		height: auto
-		padding: 1em 0
+	&
+	nav
+		position: relative !important
+		display: block
 
 	&::after
 	button
 		display: none
+
+	a[aria-label="logo"]
+		display: inline-block
+		height: 3em
+		padding: 1em 0
+
+		svg
+			padding: 0
 
 	nav
 		height: auto
@@ -200,7 +206,7 @@ non-grid-header-props =
 		text-align: left
 
 		nav
-			padding-top: 1em
+			padding-top: 1.25em
 			float: right
 
 			a
@@ -217,167 +223,3 @@ non-grid-header-props =
 @supports not (grid-template-columns: 1fr)
 	header
 		{non-grid-header-props}
-
-/*
-
-$header-height = 4em
-
-header
-	z-index: 100
-	position: absolute
-	padding: 1.5em
-
-	@media (min-width: $tablet-breakpoint)
-		padding: 2em
-
-	@media (min-width: $tablet-breakpoint)
-		padding: 2.5em
-
-	width: 100%
-	height: $header-height
-
-	makeGrid(auto 1fr, gap: 0)
-	grid-row-gap: 3em
-
-	a[aria-label=logo]
-		line-height: 0
-		align-self: center
-		height: $header-height
-
-		svg
-			height: 100%
-			padding: 1.25em 0
-
-			addTransition(fill)
-			fill: $white
-
-			&:hover
-				fill: $yellow
-
-	nav
-		grid-column: 1 / span 2
-		order: 1 // moves it to the end
-		height: 100%
-
-	button
-		justify-self: end
-		align-self: center
-
-	&::after
-		content: ''
-		position: absolute
-		z-index: -1
-		width: 100vw
-		height: 100vh
-		background-color: $dark-gray
-
-		backdrop-blur = 7px
-		@supports (-webkit-backdrop-filter: blur(backdrop-blur)) or (backdrop-filter: blur(backdrop-blur))
-			background-color: rgba($dark-gray, 0.9)
-			-webkit-backdrop-filter: blur(backdrop-blur)
-			backdrop-filter: blur(backdrop-blur)
-
-	nav
-	&::after
-		addTransition(transform)
-		transform: translateX(-100%)
-
-	nav
-		makeGrid(1fr)
-
-		a
-			color: $white
-			text-decoration: none
-			text-transform: uppercase
-			@extends .bold-font
-			font-size: 1.5em
-			addTransition(color)
-
-			&.active
-				color: $light-gray
-
-			&:hover
-				color: $yellow
-
-	button
-		font-size: 1rem;
-
-	@media (min-width: $tablet-breakpoint)
-		height: auto
-
-		grid-template-columns: 1fr
-		grid-auto-flow: column
-		grid-column-gap: 1.5em
-		align-items: center
-
-		&::after
-			content: none
-
-		nav
-			order: initial
-			grid-column: initial
-			grid-template-columns: 1fr
-			grid-auto-flow: column
-			align-items: center
-
-			transform: translateX(150%)
-
-			a
-				font-size: 0.85em
-
-// --
-// Burger Button
-
-header button
-	// outline: none
-	background: none
-	border: none
-
-	burger-dash()
-		width: 1.5em
-		height: 0.125em
-		display: block
-		background-color: $white
-		addTransition(transform)
-
-	.burger
-		burger-dash()
-		position: relative
-		margin: 0.5em 0
-
-		&::before
-		&::after
-			burger-dash()
-			content: ''
-			position: absolute
-
-		&::before
-			top: -0.5em
-
-		&::after
-			bottom: -0.5em
-
-// --
-// Visible State
-
-header.nav-visible
-	position: fixed
-
-	&::after
-	nav
-		transform: translateX(0)
-
-	.burger
-		background: none
-
-		&::before
-			top: 0
-			transform: rotate(-45deg)
-
-		&::after
-			bottom: 0
-			transform: rotate(45deg)
-
-	@media (min-width: $tablet-breakpoint)
-		position: absolute
-*/
