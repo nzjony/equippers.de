@@ -19,7 +19,7 @@ module Jekyll
     end
 
     def output_ext(ext)
-      '.min.css'
+      '.css'
     end
 
     def convert(content)
