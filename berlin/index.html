@@ -7,10 +7,9 @@ hero:
     folge uns auf Facebook und wir lassen es dich wissen.</p>
   image: /uploads/hero-1440.jpg
 service_time_: '11:00 Uhr'
-location: 'Blissestr. 2, 10713 Berlin'
-gmaps_link: 'https://maps.google.de/maps?daddr=Blissestr.%202,%2010713%20Berlin'
-bvg_link: >-
-  https://www.bvg.de/bvgapi/WebWidgets/fahrinfo.html?f=%2010405%20Berlin-Prenzlauer%20Berg,%20Greifswalder%20Str.%2023
+location: ''
+gmaps_link: ''
+bvg_link: ''
 events:
   - title: Gottesdienst Unplugged mit Pastor Bruce Monk
     date: 2018-04-29 11:00:00 +0200
@@ -86,10 +85,10 @@ connect:
 			{{ page.location }}
 		</p>
 
-		<p>
+		{% comment %} <p>
 			<a href="{{ page.gmaps_link }}">Anfahrt mit Google Maps</a><br />
 			<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>
-		</p>
+		</p> {% endcomment %}
 	</div>
 </section>
 
