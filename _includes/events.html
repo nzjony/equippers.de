@@ -1,4 +1,19 @@
 {% for event in include.events %}
-	<h3><span class="uppercase">{{ event.date | date: '%e.%m.' }}</span> | {{ event.title }}</h3>
-	{% if event.description %}<p>{{ event.description }}</p>{% endif %}
+	<h3 data-date="{{ event.date | date: '%s' }}">
+		<span class="uppercase">{{ event.date | date: '%e.%m.' }}</span> | {{ event.title }}
+	</h3>
+	{% if event.description %}<p data-date="{{ event.date | date: '%s' }}">
+		{{ event.description }}
+	</p>{% endif %}
 {% endfor %}
+
+{% comment %} filter past events {% endcomment %}
+<script>
+	if (Array.from) {
+		Array.from(document.querySelectorAll('[data-date]')).map(el => {
+			if (el.dataset.date < Math.floor(Date.now() / 1000)) {
+				el.style.display = 'none';
+			}
+		});
+	}
+</script>
