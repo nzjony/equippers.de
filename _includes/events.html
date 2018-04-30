@@ -11,7 +11,7 @@
 <script>
 	if (Array.from) {
 		Array.from(document.querySelectorAll('[data-date]')).map(el => {
-			if (el.dataset.date < Math.floor(Date.now() / 1000)) {
+			if ((parseInt(el.dataset.date) * 1000) < Date.now()) {
 				el.style.display = 'none';
 			}
 		});
