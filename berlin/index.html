@@ -7,9 +7,9 @@ hero:
     folge uns auf Facebook und wir lassen es dich wissen.</p>
   image: /uploads/hero-1440.jpg
 service_time_: '11:00 Uhr'
-location: Volkspark Wilmersdorf
-gmaps_link: ''
-bvg_link: ''
+location: null
+gmaps_link: null
+bvg_link: null
 events:
   - title: Gottesdienst Unplugged mit Pastor Bruce Monk
     date: 2018-04-29 11:00:00 +0200
@@ -85,10 +85,10 @@ connect:
 			{{ page.location }}
 		</p>
 
-		{% comment %} <p>
-			<a href="{{ page.gmaps_link }}">Anfahrt mit Google Maps</a><br />
-			<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>
-		</p> {% endcomment %}
+		{% if page.gmaps_link or page.bvg_link %}<p>
+			{% if page.gmaps_link %}<a href="{{ page.gmaps_link }}">Anfahrt mit Google Maps</a><br />{% endif %}
+			{% if page.bvg_link %}<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>{% endif %}
+		</p>{% endif %}
 	</div>
 </section>
 
