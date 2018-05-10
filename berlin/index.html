@@ -1,22 +1,29 @@
 ---
 title: Equippers Berlin
 hero:
-  html: >-
-    <h3 class="no-margin-after">&nbsp;</h3><h1>Wir ziehen um!</h1><p>Wir wissen
-    aber noch nicht, wohin. Melde dich f&uuml;r den Newsletter an oder folge uns
-    auf Facebook und wir lassen es dich wissen.</p>
+  html: '<h1>Kirche anders als du denkst</h1>'
   image: /uploads/hero-1440.jpg
 service_time_: '11:00 Uhr'
-location: Natur-Park Schöneberger Südgelände
-gmaps_link: null
-bvg_link: null
+location: Shakespeare Company, Natur-Park Schöneberger Südgelände
+gmaps_link: 'https://www.google.com/maps/dir/?api=1&destination=Shakespeare+Company+Berlin+e.V.'
+bvg_link: 'http://fahrinfo.vbb.de/bin/query.exe/dn?SID=@&ZID=A=1@O=S%20Priesterweg%20(Berlin)@X=13356029@Y=52459240@U=86@L=900058102@B=1@V=3.9,@p=1525858230@@&timesel=arrive&date=13.05.2018&time=10:45&externalCall=yes&start=yes'
 events:
-  - title: Gottesdienst Unplugged mit Pastor Bruce Monk
-    date: 2018-04-29 11:00:00 +0200
+  - title: Openair-Gottesdienst mit Pastor Sam Monk
+    date: 2018-05-13 11:00:00 +0200
     description: >-
-      Wir stecken noch in den Renovierungsarbeiten bevor wir ausziehen, daher
-      gibt es einen letzten Gottesdienst Unplugged in der Blissestraße mit
-      Pastor Bruce Monk aus Neuseeland.
+      Diese Woche feiern wir Gottesdienst im Natur-Park Schöneberger Südgelände
+      und wir haben Sam Monk aus Auckland, Neuseeland zu Gast. Pastor Sam und
+      seine Frau Kathy leiten die Equippers-Gemeinden in Auckland und das
+      Equippers Netzwerk in Neuseeland. Der Park verlangt für die Nutzung eine
+      Gebühr von 1€ (ab 14 Jahren). Sollte es dir nicht möglich sein, dies zu
+      tun, dann lass dich davon nicht abhalten, zum Gottesdienst zu kommen.Dann
+      laden wir dich natürlich ein 🙌 (am Eingang werden Ordner mit 1€-Münzen
+      stehen).
+  - title: Gottesdienst im Maritim Hotel Berlin
+    date: 2018-05-20 11:00:00 +0200
+    description: >-
+      Unser neuer Veranstaltungsort für Mai ist das Maritim Hotel in der
+      Stauffenbergstraße.
   - title: Equippers Konferenz
     date: 2018-11-02 01:00:00 +0100
     description: >-
@@ -86,8 +93,8 @@ connect:
 		</p>
 
 		{% if page.gmaps_link or page.bvg_link %}<p>
-			{% if page.gmaps_link %}<a href="{{ page.gmaps_link }}">Anfahrt mit Google Maps</a><br />{% endif %}
-			{% if page.bvg_link %}<a href="{{ page.bvg_link }}">Anfahrt mit BVG</a>{% endif %}
+			{% if page.gmaps_link %}<a href="{{ page.gmaps_link }}" target="_blank">Anfahrt mit Google Maps</a><br />{% endif %}
+			{% if page.bvg_link %}<a href="{{ page.bvg_link }}" target="_blank">Anfahrt mit BVG</a>{% endif %}
 		</p>{% endif %}
 	</div>
 </section>
