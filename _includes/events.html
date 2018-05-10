@@ -9,11 +9,11 @@
 
 {% comment %} filter past events {% endcomment %}
 <script>
-	if (Array.from) {
-		Array.from(document.querySelectorAll('[data-date]')).map(el => {
-			if ((parseInt(el.dataset.date) * 1000) < Date.now()) {
-				el.style.display = 'none';
-			}
-		});
+if (Array.from) {
+	for (const event of Array.from(document.querySelectorAll('[data-date]'))) {
+		if ((parseInt(event.dataset.date) * 1000) < Date.now()) {
+			event.style.display = 'none';
+		}
 	}
+}
 </script>
