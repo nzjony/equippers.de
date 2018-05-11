@@ -1,12 +1,11 @@
 ---
 title: Equippers Berlin
-hero:
-  html: '<h1>Kirche anders als du denkst</h1>'
-  image: /uploads/hero-1440.jpg
+hero_image: /uploads/hero-1440.jpg
 service_time_: '11:00 Uhr'
-location: Shakespeare Company, Natur-Park Schöneberger Südgelände
-gmaps_link: 'https://www.google.com/maps/dir/?api=1&destination=Shakespeare+Company+Berlin+e.V.'
+location: Shakespeare Company, Natur-Park Schöneberger Südgelände
 bvg_link: 'http://fahrinfo.vbb.de/bin/query.exe/dn?SID=@&ZID=A=1@O=S%20Priesterweg%20(Berlin)@X=13356029@Y=52459240@U=86@L=900058102@B=1@V=3.9,@p=1525858230@@&timesel=arrive&date=13.05.2018&time=10:45&externalCall=yes&start=yes'
+_next_location: Maritim Hotel Berlin (Stauffenbergstr.)
+_next_bvg_link: "http://fahrinfo.vbb.de/bin/query.exe/dn?SID=@&ZID=A=2@O=10785%20Berlin-Tiergarten,%20Stauffenbergstr.%2026@U=103@L=770018679@B=1@V=3.9,@p=1524056779@@&timesel=arrive&date=20.05.2018&time=10:45&externalCall=yes&start=yes"
 events:
   - title: Openair-Gottesdienst mit Pastor Sam Monk
     date: 2018-05-13 11:00:00 +0200
@@ -16,7 +15,7 @@ events:
       seine Frau Kathy leiten die Equippers-Gemeinden in Auckland und das
       Equippers Netzwerk in Neuseeland. Der Park verlangt für die Nutzung eine
       Gebühr von 1€ (ab 14 Jahren). Sollte es dir nicht möglich sein, dies zu
-      tun, dann lass dich davon nicht abhalten, zum Gottesdienst zu kommen.Dann
+      tun, dann lass dich davon nicht abhalten, zum Gottesdienst zu kommen. Dann
       laden wir dich natürlich ein 🙌 (am Eingang werden Ordner mit 1€-Münzen
       stehen).
   - title: Gottesdienst im Maritim Hotel Berlin
@@ -76,26 +75,30 @@ connect:
     link: 'https://overcast.fm/itunes977023058/equippers-berlin'
 ---
 
-{% include hero.html options=page.hero %}
-
-<section>
-	<div class="editable content text-center">
-		<p><strong>Equippers Berlin</strong> ist eine Kirche, die Menschen dient. Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, Menschen durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
-	</div>
-
-	<div class="content text-center padding-vertical">
-		<a href="/berlin/about" class="button outline">Mehr über uns</a>
-
-		<h2 class="editable padding-top">Gottesdienst diesen Sonntag:</h2>
+<section class="dark hero" {% if page.hero_image %}style="background-image: url('{{ page.hero_image }}');"{% endif %}>
+	<div class="content text-center">
+		<h2 class="editable no-margin-after">Gottesdienst diesen Sonntag:</h2>
 		<p>
 			<span class="light-font" style="font-size: 2.5em;">{{ page.service_time_ }}</span><br />
 			{{ page.location }}
 		</p>
 
-		{% if page.gmaps_link or page.bvg_link %}<p>
-			{% if page.gmaps_link %}<a href="{{ page.gmaps_link }}" target="_blank">Anfahrt mit Google Maps</a><br />{% endif %}
-			{% if page.bvg_link %}<a href="{{ page.bvg_link }}" target="_blank">Anfahrt mit BVG</a>{% endif %}
-		</p>{% endif %}
+		<p>
+      <a href="https://www.google.com/maps/dir/?api=1&destination={{ page.location | url_encode }}" target="_blank">
+        Anfahrt mit Google Maps
+      </a>
+      <br>
+			{% if page.bvg_link != '' %}<a href="{{ page.bvg_link }}" target="_blank">Anfahrt mit BVG</a>{% endif %}
+		</p>
+	</div>
+</section>
+
+
+<section>
+	<div class="content text-center">
+		<p class="editable"><strong>Equippers Berlin ist Kirche anders als du denkst.</strong> Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, Menschen durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
+
+		<p class="padding-bottom"><a href="/berlin/about" class="button outline">Mehr über uns</a></p>
 	</div>
 </section>
 
