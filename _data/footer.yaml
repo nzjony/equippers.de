@@ -1,9 +1,9 @@
 berlin:
   name: Equippers Berlin e. V.
-  address: Blissestr. 2, 10713 Berlin
+  address: Berlin
   email: mail@equippers.de
-  phone: '+493031804840'
-  phone_formatted: +49 (0)30 3180 4840
+  phone: '+4933284445177'
+  phone_formatted: +49 (0)3328 444 5177
   links:
     - title: Facebook
       goes_to: https://www.facebook.com/equippersberlin
