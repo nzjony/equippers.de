@@ -94,11 +94,11 @@ connect:
 </section>
 
 
-<section>
+<section class="padding-vertical">
 	<div class="content text-center">
-		<p class="editable"><strong>Equippers Berlin ist Kirche anders als du denkst.</strong> Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, Menschen durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
+		<p class="editable text-max-width"><strong>Equippers Berlin ist Kirche anders als du denkst.</strong> Wir sind Freunde, die sich gegenseitig unterstützen und anfeuern, mit Gott ganze Sache zu machen. Unsere Mission ist es, Menschen durch den Glauben an Jesus Christus für das Leben auszurüsten.</p>
 
-		<p class="padding-bottom"><a href="/berlin/about" class="button outline">Mehr über uns</a></p>
+		<p><a href="/berlin/about" class="button outline">Mehr über uns</a></p>
 	</div>
 </section>
 
@@ -111,7 +111,11 @@ connect:
 
 <section class="promos dark">
 	{% for promo in page.promos %}
-		<a href="{{ promo.link }}" class="square" style="background-image: url('{{ promo.background_image }}')">
+		<a
+      href="{{ promo.link }}"
+      class="square {% if promo.overlay != false %}overlay{% endif %}"
+      style="background-image: url('{{ promo.background_image }}')"
+    >
 			<h2 class="uppercase no-margin">{{ promo.title }}</h2>
 			<p class="no-margin">{{ promo.subtitle }}</p>
 		</a>

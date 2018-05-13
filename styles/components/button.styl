@@ -28,6 +28,13 @@
 			background-color: $dark
 			color: $light
 
+		&.light
+			border-color: $light
+			color: $light
+			&:hover
+				background-color: $light
+				color: $dark
+
 	for value in ('dark' 'light') ('green' 'light') ('yellow' 'dark')
 		&.{value[0]}
 			background-color: $ + unquote(value[0])
