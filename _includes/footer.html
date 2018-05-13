@@ -1,6 +1,6 @@
 <footer class="padding-vertical">
 	<div class="content">
-		<p>&copy; {{ 'now' | date: '%Y' }} {{ include.data.name }} - Alle Rechte vorbehalten. Equippers ist eine Kirche im Bund Freikirchlicher Pfingstgemeinden KdöR.</p>
+		<p>&copy; {{ 'now' | date: '%Y' }} {{ include.data.name }} - Alle Rechte vorbehalten. {% if include.data.copyright_text %}{{ include.data.copyright_text }}{% endif %}</p>
 
 		<ul>
 		{% for link in include.data.links %}
