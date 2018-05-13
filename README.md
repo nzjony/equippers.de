@@ -29,3 +29,7 @@ Cloudcannon is set up to track changes on the `master` branch of this repository
 * https://docs.cloudcannon.com
 * https://jekyllrb.com/docs/home
 * http://stylus-lang.com
+
+## License
+
+Unlicensed. © Equippers Deutschland - All rights reserved.
