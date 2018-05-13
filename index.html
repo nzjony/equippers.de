@@ -4,16 +4,25 @@ locations:
   - title: Berlin
     sub_title:
     goes_to: /berlin
+    grid_area: berlin
     background_image: /uploads/berlin-1440.jpg
     background_image_position:
-  - title: Hamburg
+  - title: Mainz
     sub_title:
+    goes_to: /mainz
+    grid_area: mainz
+    background_image: /uploads/hero-mainz.jpg
+    background_image_position:
+  - title: Hamburg
+    sub_title: Start-Up
     goes_to: /hamburg
+    grid_area: hamburg
     background_image: /uploads/hamburg-4-1440.jpg
     background_image_position:
   - title: München
-    sub_title:
+    sub_title: Start-Up
     goes_to: /muenchen
+    grid_area: muenchen
     background_image: /uploads/munich-1440.jpg
     background_image_position:
 ---
@@ -28,6 +37,7 @@ locations:
 			{% if location.goes_to %}href="{{ location.goes_to }}"{% endif %}
 			class="text-center"
 			style="
+        grid-area: {{ location.grid_area }};
 				background-image: url('{{ location.background_image }}');
 				{% if location.background_image_position %}background-position: {{ location.background_image_position }}{% endif %}
 			"

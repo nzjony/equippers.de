@@ -14,12 +14,19 @@
 .landing
 	height: 90vh
 
-	makeGrid(1fr, gap: 0)
-	grid-template-rows: repeat(3, 1fr)
+	display: grid
+	grid-template-areas: "berlin" "mainz" "hamburg" "muenchen"
+
+	@media (min-width: $tablet-breakpoint)
+		grid-template-areas: \
+			"berlin berlin" \
+			"mainz mainz" \
+			"hamburg muenchen"
 
 	a
 		background-size: cover
 		background-position: center
+		box-sizing: border-box
 
 		text-decoration: none
 
@@ -29,11 +36,10 @@
 		makeGrid(1fr, gap: 0)
 		align-content: center
 
-		border: 0px solid $yellow
-		addTransition('border, color')
+		addTransition('box-shadow, color')
 
 		&:hover
-			border-width: 0.5rem
+			box-shadow: inset 0.5rem 0.5rem $yellow, inset -0.5rem -0.5rem $yellow
 			color: $yellow
 
 		addTransparentBackgroundOverlay()
