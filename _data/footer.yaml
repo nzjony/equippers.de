@@ -34,6 +34,24 @@ hamburg:
     iban:
     bic:
     bank_name:
+mainz:
+  name: Equippers Mainz
+  address: Hauptstr. 17-19/6329, 55120 Mainz
+  email: mainz@equippers.de
+  phone: '+4961319452910'
+  phone_formatted: +49 (0)6131 945 2910
+  links:
+    - title: Facebook
+      goes_to: https://www.facebook.com/diebasis
+    - title: Instagram
+      goes_to: https://www.instagram.com/basismainz/
+    - title: Youtube
+      goes_to: https://www.youtube.com/user/BasisMainz
+  bank_account:
+    owner:
+    iban:
+    bic:
+    bank_name:
 muenchen:
   name: Equippers Start-Up München
   address: Geltinger Straße 22, 81379 München

@@ -29,6 +29,11 @@ defaults:
     values:
       layout: "hamburg"
   - scope:
+      path: "mainz"
+      type: "pages"
+    values:
+      layout: "mainz"
+  - scope:
       path: "muenchen"
       type: "pages"
     values:

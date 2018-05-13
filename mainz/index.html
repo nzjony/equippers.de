@@ -1,0 +1,100 @@
+---
+title: Equippers Mainz
+hero_image: /uploads/hero-mainz.jpg
+service_time_: '11:00 Uhr | 15:30 Uhr'
+location: Alte Waggonfabrik Mainz
+gmaps_destination: 50.01520679999999,8.2350326
+events:
+  - title: Stärker Conference 2018
+    date: 2018-05-18 20:00:00 +0200
+    description: >-
+      Unsere Konferenz mit paralleler Kids-Konferenz. Die Sprecher dieses Jahr
+      sind die Pastoren Sam Monk (Equippers Neuseeland), Francesco Basile
+      (Equippers Rom) und Thore Runkel.
+promos:
+  - title:
+    subtitle:
+    background_image: /uploads/staerker-18.jpg
+    link: https://basis.churchsuite.co.uk/events/80tdmlkl
+    overlay: false
+  - title: Equippers College
+    subtitle: Be the Next Wave
+    link: 'https://equipperscollege.com'
+    background_image: /uploads/college.jpg
+  - title: Music
+    subtitle: The Sound of our Praise
+    background_image: /uploads/clrs.jpg
+    link: 'https://www.equipperschurch.com/music'
+move_image: https://images.unsplash.com/photo-1455734729978-db1ae4f687fc?h=1500&amp;w=2000&amp;fit=clip&amp;fm=jpg
+connect:
+  - title: Facebook
+    svg_icon_id: facebook
+    link: 'https://www.facebook.com/equippersberlin'
+  - title: Instagram
+    svg_icon_id: instagram
+    link: 'https://www.instagram.com/equippersberlin/'
+  - title: Newsletter
+    svg_icon_id: newsletter
+    link: 'https://eepurl.com/dhD0zz'
+  - title: Podcast
+    svg_icon_id: podcast
+    link: 'https://overcast.fm/itunes977023058/equippers-berlin'
+---
+
+<section class="dark hero" {% if page.hero_image %}style="background-image: url('{{ page.hero_image }}');"{% endif %}>
+	<div class="content text-center">
+		<h2 class="editable no-margin-after">Gottesdienste diesen Sonntag:</h2>
+		<p>
+			<span class="light-font" style="font-size: 2.5em;">{{ page.service_time_ }}</span><br />
+			{{ page.location }}
+		</p>
+
+		<p><a href="https://www.google.com/maps/dir/?api=1&destination={{ page.gmaps_destination | url_encode }}" target="_blank">
+      Anfahrt mit Google Maps
+		</a></p>
+	</div>
+</section>
+
+
+<section class="padding-vertical">
+	<div class="content text-center">
+		<p class="editable text-max-width"><strong>Equippers Main ist eine Kirche für diese Generation.</strong> Ein Ort an dem der Himmel die Erde berührt und sich Menschen aus dem 21. Jahrhundert zu Hause fühlen. Komm so wie du bist, du bist willkommen!</p>
+
+		<p><a href="/berlin/about" class="button outline">Mehr über uns</a></p>
+	</div>
+</section>
+
+<section class="dark padding-vertical">
+	<div class="content">
+		<h1 class="editable">Events</h1>
+		{% include events.html events=page.events %}
+	</div>
+</section>
+
+<section class="promos dark">
+	{% for promo in page.promos %}
+		<a
+      href="{{ promo.link }}"
+      class="square {% if promo.overlay != false %}overlay{% endif %}"
+      style="background-image: url('{{ promo.background_image }}')"
+    >
+			<h2 class="uppercase no-margin">{{ promo.title }}</h2>
+			<p class="no-margin">{{ promo.subtitle }}</p>
+		</a>
+	{% endfor %}
+</section>
+
+<section class="dark strong-overlay super-padding" {% if page.move_image %}style="background-image: url('{{ page.move_image }}');"{% endif %}>
+	<div class="editable content text-center">
+		<h1>Move <span class="light-font">Gruppen</span></h1>
+    <p></p>
+    <p><a href="/mainz/move" class="light button outline">Finde deine Move-Gruppe</a></p>
+	</div>
+</section>
+
+<section class="padding-top">
+	<div class="content">
+		<h1 class="editable">Bleibe auf dem Laufenden</h1>
+	</div>
+	{% include squares.html squares=page.connect %}
+</section>

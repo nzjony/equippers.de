@@ -10,4 +10,15 @@ berlin:
   - title: Podcast
     goes_to: https://overcast.fm/itunes977023058/equippers-berlin
 hamburg:
+mainz:
+  - title: Home
+    goes_to: /mainz
+  - title: Events
+    goes_to: /mainz/events
+  - title: Move
+    goes_to: /mainz/move
+  - title: Podcast
+    goes_to: /mainz
+  - title: Kontakt
+    goes_to: /mainz/contact
 muenchen:
