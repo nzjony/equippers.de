@@ -26,7 +26,7 @@ locations:
 	{% for location in page.locations %}
 		<a
 			{% if location.goes_to %}href="{{ location.goes_to }}"{% endif %}
-			class="text-center"
+			class="text-center overlay"
 			style="
 				background-image: url('{{ location.background_image }}');
 				{% if location.background_image_position %}background-position: {{ location.background_image_position }}{% endif %}
