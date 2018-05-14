@@ -5,6 +5,12 @@ footer
 	background: linear-gradient(to bottom, #f9f9f9, $white)
 	color: lighten($dark, 15%)
 
+	svg
+		display: inline-block
+		height: 0.9em
+		width: 0.9em
+		margin-bottom: -0.1em
+
 	ul
 		list-style-type: none
 		padding: 0
@@ -13,5 +19,8 @@ footer
 			li
 				display: inline-block
 
-				&:not(:last-of-type)::after
-					content: " \0000B7 "
+			&.links li:not(:last-of-type)::after
+				content: " \0000B7 "
+
+			&.social-media li:not(:last-of-type)
+				margin-right: 0.5em

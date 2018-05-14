@@ -2,13 +2,16 @@
 	<div class="content">
 		<p>&copy; {{ 'now' | date: '%Y' }} {{ include.data.name }} - Alle Rechte vorbehalten. {% if include.data.copyright_text %}{{ include.data.copyright_text }}{% endif %}</p>
 
-		<ul>
+		<ul class="social-media">
 		{% for link in include.data.links %}
-			<li><a target="_blank" href="{{ link.goes_to }}">{{ link.title }}</a></li>
+			<li>
+				{% if link.icon_id %}<svg><use xlink:href="#icon-{{ link.icon_id }}"></use></svg>{% endif %}
+				<a target="_blank" href="{{ link.goes_to }}">{{ link.title }}</a>
+			</li>
 		{% endfor %}
 		</ul>
 
-		<ul>
+		<ul class="links">
 			<li><a target="_blank" href="https://www.equipperschurch.com">Equippers Global</a></li>
 			<li><a target="_blank" href="https://equipperscollege.com">Equippers College</a></li>
 			<li><a target="_blank" href="https://www.equipperschurch.com/music">Equippers Music</a></li>

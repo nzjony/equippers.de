@@ -33,3 +33,12 @@ defaults:
       type: "pages"
     values:
       layout: "muenchen"
+
+# Cloudcannon
+
+icon_ids:
+  - facebook
+  - instagram
+  - twitter
+  - newsletter
+  - podcast
