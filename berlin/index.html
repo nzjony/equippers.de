@@ -82,10 +82,11 @@ connect:
 		</p>
 
 		<p>
-      <a href="https://www.google.com/maps/dir/?api=1&destination={{ page.location | url_encode }}" target="_blank">
-        Anfahrt mit Google Maps
-      </a>
-      <br>
+			<a
+				href="https://www.google.com/maps/dir/?api=1&destination={{ page.location | url_encode }}"
+				target="_blank"
+			>Anfahrt mit Google Maps</a>
+			<br>
 			{% if page.bvg_link != '' %}<a href="{{ page.bvg_link }}" target="_blank">Anfahrt mit BVG</a>{% endif %}
 		</p>
 	</div>
