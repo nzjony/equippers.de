@@ -94,6 +94,8 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    uglifier (4.1.10)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -104,6 +106,7 @@ DEPENDENCIES
   jekyll-sitemap (= 1.2.0)
   sprockets (= 4.0.0.beta7)
   stylus (= 1.0.2)
+  uglifier (= 4.1.10)
 
 BUNDLED WITH
    1.16.1

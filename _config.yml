@@ -6,7 +6,6 @@ stylus:
   path: styles
 
 assets:
-  compression: false
   defaults:
     js: { integrity: false }
   sources:

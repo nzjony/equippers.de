@@ -10,4 +10,5 @@ group :jekyll_plugins do
 	gem 'stylus', '1.0.2'
 	gem 'jekyll-assets', '3.0.11'
 	gem 'sprockets', '4.0.0.beta7'
+	gem 'uglifier', '4.1.10'
 end
