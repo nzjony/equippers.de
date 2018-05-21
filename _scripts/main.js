@@ -1,3 +1,4 @@
+//= require load-font.js
 //= require header.js
 
 // lock hero height which is based on the viewport height (vh) unit
