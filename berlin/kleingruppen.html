@@ -6,6 +6,90 @@ hero:
   html: <h1>Kleingruppen</h1>
   image: /uploads/egroups-hero.jpg
   image_position: center 25%
+smallgroups:
+  -
+    id: marcundregine
+    name: 'Go Wedding!'
+    leader: 'Regine & Marc'
+    topic: bla
+    target: gemischt
+    description: 'Gemeinschaft, gemeinsames Abendessen, Bibelstudium zu einem Buch der Bibel'
+    date: 'dienstags, 19 Uhr'
+    location: Berlin-Gesundbrunnen
+    max: 10
+    full: false
+    lat: 52.5657462
+    lng: 13.3910762
+    img: geh.jpeg
+  -
+    id: arrive
+    name: Arrive
+    leader: 'Dirk & Tine'
+    topic: bla
+    target: 'Familien mit Kindern'
+    description: 'Zuhören, Reden, Beten, Lachen, Essen- Thema, Kinder spielen. Wir starten mit einem Abendessen, beten und fokussieren uns auf die Eltern - deren Erfahrungen, Probleme, Wünsche. Wir wünschen uns, dass die Teilnehmer bei uns "ANKOMMEN". Die Kinder sollen sich wohlfühlen und Freundschaften ausbauen.'
+    date: 'jeden 2. Freitag Abend'
+    location: Potsdam
+    max: 8
+    full: false
+    img: dirk-tine.jpg
+    lat: 52.3914817
+    lng: 13.0665398
+  -
+    id: welcome
+    name: Recharge
+    leader: 'Jonathan & Patricia'
+    img: stich.jpg
+    topic: bla
+    target: 'Gemischt, Kinder willkommen.'
+    description: 'Gemeinsames Abendessen, Austausch zu einen Abschnitt aus der Bibel und Zeit für Gebet.'
+    date: 'dienstags, 18-21 Uhr, ab dem 27.02.18'
+    location: Berlin-Steglitz
+    max: 8
+    full: true
+    lat: 52.4483983
+    lng: 13.3538632
+  -
+    id: vision
+    name: 'Gewohnheiten und Ziele'
+    leader: Gerda
+    topic: bla
+    target: Jedermann
+    description: 'Gewohnheiten und Ziele sind entscheidend für ein erfolgreiches Leben. Gott möchte, dass du erfolgreich bist.'
+    date: 'dienstags, 17 Uhr (1,5 bis 2 Stunden)'
+    location: Gemeinderäume
+    max: 10
+    full: false
+    img: gerda.jpg
+    lat: 52.486418
+    lng: 13.322284
+  -
+    id: leiter
+    name: 'Leiterschaftspotential entdecken und fördern'
+    leader: Jürgen
+    topic: bla
+    target: alle
+    description: 'John Maxwell Leiterschaftstraining'
+    date: 'dienstags, 17 Uhr'
+    location: Gemeinderäume
+    max: 10
+    full: false
+    lat: 52.485438
+    lng: 13.320278
+    img: juergen.jpg
+  -
+    id: prayer
+    name: Start
+    leader: 'Markus & Dorle'
+    target: 'Für alle, die ihre Beziehung zu Gott vertiefen wollen oder auch einfach nur mehr über ihn erfahren möchten.'
+    description: 'Der Abend richtet sich an die Menschen, die ihr Lebensfundament stärken wollen und ihren Glauben an Jesus vertiefen möchten.'
+    date: 'montags, 20.00 Uhr'
+    location: 'Gemeinde / Seminarraum'
+    max: 15
+    full: false
+    lat: 52.485712
+    lng: 13.322317
+    img: dunns.jpg
 ---
 
 {% include hero.html options=page.hero %}
@@ -20,5 +104,18 @@ hero:
 		<h4 class="uppercase">Nächste Kleingruppen-Saison: 17. September bis 9. Dezember.</h4>
 
 		<p>Hast du Fragen zu unseren Kleingruppen, dann wende dich an uns: kleingruppe@equippers.de. Wir kommen gern mit dir in Kontakt. Wenn du in der nächsten Saison eine eigene Kleingruppe anbieten möchtest, sprich uns gern sonntags nach dem Gottesdienst persönlich oder am Info-Punkt an.</p>
-	</section>
+    </section>
+    <section class="communities padding-vertical">
+	<div class="content">
+		<div class="grid">
+			{% for group in page.smallgroups %}
+				<div class="s-group">
+                    <h4>{{ group.name }}</h4>
+                    <p>{{ group.date }}<br>Ort: {{ group.location }}{% if group.full %}<br>Keine Plätze mehr!{% endif %}</p>
+                    <a class="btn btn-green" href="" onclick="alert('helloworld'); return false;">Details & Anmeldung</a>
+                </div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
 </article>
